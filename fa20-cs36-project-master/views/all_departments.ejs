@@ -1,0 +1,20 @@
+<h2 class="text-light py-2">All Departments</h2>
+
+<table class="table table-striped table-dark">
+    <thead>
+        <th>Name</th>
+
+    </thead>
+    <tbody>
+        <% for (let department of departments) { %>
+        <tr>
+            <td>
+                <a href="/departments/<%=department.dept_id%>"
+                    ><%=department.dept_name%></a
+                >
+            </td>
+
+        </tr>
+        <% } %>
+    </tbody>
+</table>
