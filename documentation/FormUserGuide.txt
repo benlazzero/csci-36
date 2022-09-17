@@ -1,0 +1,67 @@
+    This is the user guide for the Department Learning Outcomes Discussion Summary
+form. Be sure to fill out all of the sections you want before you click on the 
+submit button at the bottom of the page. Your email address is required so that we 
+can send you a copy of the awnsers you input.
+
+Email address
+-This is where you fill in your email address that you want a copy of your 
+awnsers to be sent to.
+
+Discipline Area
+-This is where you input the discipline area you are going to be discussing.
+
+Completed by
+-This is where you input the name of the person filling out this form(your name).
+
+Who was present for this discussion (list names)
+-This is where you list all the names of the people that attended this 
+discussion that you are filling out this form for.
+
+Which Outcomes were discussed?
+-The following sections are optional to fill out.
+
+Courses & SLOs Assessed
+-This is where you input the courses and student learning outcomes that you
+assess in this meeting.
+
+Programs & PLOs Assessed
+-This is where you input the programs and program learning outcomes that you
+assess in this meeting.
+
+Looking Back
+-In this section begin with a look back at summaries submitted in the prior two 
+semesters, and provide here a brief follow-up on any actions taken, resources 
+requested, resources received, etc.
+
+Looking Back(input section)
+-This is where you will input any notes that you want to make about previous
+assessments.
+
+The next sections are divided into three parts that have to do with describing
+this assessment.
+
+Part 1
+
+Findings
+-You will input into this section the thing learned from this assessment.
+
+Part 2
+
+Strategies
+-Input how the findings above will be used to inform practice. 
+For example: planned improvements in individual courses; department-wide trainings; 
+altering the assessment; or moving the focus to a different learning outcome.
+
+Part 3
+
+Resources Needed
+-Input what resources (if any) are needed to make the changes outlined above? 
+What resources (if any) does the department need to help students meet course 
+and/or program outcomes.
+
+Notes 
+-This is where you input any notes you have about the assessment.
+
+Submit Button 
+-Click this button after you are done filling out all the sections you want
+and a email of your awnsers will be sent to the address you provided.
