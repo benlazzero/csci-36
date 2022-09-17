@@ -1,9 +1,0 @@
-Example: 
-
-UPDATE programs
-SET prog_desc = 'Edited PLO'
-WHERE prog_name = Accounting
-AND deg_id = 4
-
-Changes:
-
