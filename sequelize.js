@@ -7,14 +7,14 @@ const sequelize = new Sequelize({
     host: {image: 'mysql:5.7', 
     volumes: 'db_data:/var/lib/mysql', 
     environment: { 
-        MYSQL_ROOT_PASSWORD: 'somestrongpass',
+        MYSQL_ROOT_PASSWORD: 'superDUPER@m3',
         MYSQL_DATABASE: 'csci36',
         MYSQL_USER: 'csci36',
         MYSQL_PASSWORD: 'csci36'
       }
     },
     database: 'home',
-    username: 'root',
+    username: 'csci36',
     password: 'superDUPER@m3',
     dialect: 'mysql',
     pool: {

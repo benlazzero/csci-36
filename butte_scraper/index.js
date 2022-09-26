@@ -40,8 +40,8 @@ async function scrapeProgramList() {
             .trim(); // Program chair
         chair = chair.split(",")[0]; // removes extra info from chair string
 
-        let program = {}
-
+        let program = {};
+        
         // Adds data to JSON object
         program.name = name;
         program.type = type;

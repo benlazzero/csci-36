@@ -16,9 +16,9 @@ dotenv.config();
 // 
 // uncomment if database is empty(first run)
 // comment out after database is populated(after first run)
-//
-// await scrapeProgramList();
-//
+
+await scrapeProgramList();
+
 
 // Home Route
 app.get("/", (req, res) => {
