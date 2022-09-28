@@ -7,7 +7,7 @@ module.exports = class Sheet {
         this.doc = new GoogleSpreadsheet('1OE6LBQzO7DGGRFFmWWalNpywKhw3fveJdlmiP6c19L0');
     }
     async load() {
-        await this.doc.useServiceAccountAuth(require('./credentials.json'));
+        await this.doc.useServiceAccountAuth(require('../butte_scraper/credentials.json'));
         await this.doc.loadInfo();
     }
     async addRows(rows) {

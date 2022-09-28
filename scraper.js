@@ -1,19 +1,21 @@
-//https://docs.google.com/spreadsheets/d/1OE6LBQzO7DGGRFFmWWalNpywKhw3fveJdlmiP6c19L0/edit#gid=0
-import fetch from "node-fetch";
-import cheerio from "cheerio";
-import { departments, programs} from '../sequelize.js';
+import fetch from "node-fetch"; // for the http request 
+import cheerio from "cheerio"; // parsing library
+import { departments, programs} from './sequelize.js'; // models from DB for read/write
+
+// scraper implementation is 'brute force' to say the least. 
+// this is maybe the least important to understand at this point, I would look this over last.
 
 async function scrapeProgramList() {
     // temporary fix for duplicate primary keys being entered on intial scrape -> DB.
     let currentid = 1; 
     //
     
-    const programListRes = await fetch(
-        "https://programs.butte.edu/ProgramList/All/10/false"
-    );
+    const programListRes = await fetch("https://programs.butte.edu/ProgramList/All/10/false"); // streams the program list in binary or hex or something 
 
-    const programListText = await programListRes.text();
-    let $ = cheerio.load(programListText);
+    const programListText = await programListRes.text(); // decodes that to utf-8 or ascii so we can read it
+    let $ = cheerio.load(programListText); // pretty sure this makes a DOM tree from all the html that can be parsed by the cheerio lib, like preprocessing
+    
+    // grabbing specific classes or tags?
     const programListContent = $(".content");
     const tbody = programListContent.find("tbody");
 

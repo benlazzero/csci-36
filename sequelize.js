@@ -2,7 +2,7 @@ import Sequelize from 'sequelize';
 import { departmentModel } from './models/departments.js';
 import { programModel } from './models/programs.js';
 
-// Removed enviroment variables from docker file, everything is here just minus Docker.
+// Setting up the database connection, ripped from Sequelize docs
 const sequelize = new Sequelize({
     host: {image: 'mysql:5.7', 
     volumes: 'db_data:/var/lib/mysql', 
@@ -26,13 +26,13 @@ const sequelize = new Sequelize({
     logging: false
 });
 
-//TODO: what is this code block doing?
+// Makes the tables that will store data from the scrapers
 const departments = departmentModel(sequelize, Sequelize);
 const programs = programModel(sequelize, Sequelize);
 sequelize.sync({alter: true})
 .then(() => {
     console.log('Database & Tables Created Successfully!');
 });
-//
 
+// exports the models for read/write from other modules. 
 export { departments, programs };
