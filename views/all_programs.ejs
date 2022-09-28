@@ -1,0 +1,24 @@
+<h2 class="text-light py-2">All Programs</h2>
+
+<table class="table table-striped table-dark">
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Department</th>
+        <th>Code</th>
+    </thead>
+    <tbody>
+        <% for (let program of programs) { %>
+        <tr>
+            <td>
+                <a href="/programs/<%=program.prog_id%>"
+                    ><%=program.prog_name%></a
+                >
+            </td>
+            <td><%=program.prog_type%></td>
+            <td><%=program.prog_dept%></td>
+            <td><%=program.prog_code%></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
