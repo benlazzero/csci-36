@@ -87,7 +87,6 @@ class Program {
     let allPrograms = [];
     const totalLinks = this.programInfo[0].length;
     let index = 0;
-    
     // grabbing all html from each program
     while(index < totalLinks) {
       console.log((index+1) + '/' + totalLinks);
@@ -95,7 +94,6 @@ class Program {
       allPrograms.push(currentProgram);
       index = index + 1;
     }
-    
     this.insideProgramsArray = allPrograms;
   }
   
