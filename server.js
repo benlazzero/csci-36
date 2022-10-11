@@ -3,9 +3,9 @@ import express from 'express';
 import expressLayouts from 'express-ejs-layouts';
 
 // Bringing in models, modules, and routes
-import { departments, programs } from './sequelize.js'; // models from DB for read/write
-import { fetchHtml, Program } from './scraper.js';
-import Database from './database.js';
+import { departments, programs } from './database/sequelize.js'; // models from DB for read/write
+import { FetchHtml, Program } from './scraper.js';
+import Database from './database/database.js';
 import indexRoute from './routes/index.js';
 import departmentRoute from './routes/departments.js';
 import programRoute from './routes/programs.js';
@@ -41,16 +41,15 @@ server.listen(PORT, async () => {
         
         // Get html from year to scrape
         const butteAllProgramsUrl = "https://programs.butte.edu/ProgramList/All/12/false"
-        let butteAllProgramsHtml = await fetchHtml(butteAllProgramsUrl);
+        let butteAllProgramsHtml = await FetchHtml(butteAllProgramsUrl);
 
         // Program class used to get infoMatrix of all data
         const butteProgram = new Program(butteAllProgramsHtml);
-        const programsMatrix = await butteProgram.GetAndOrderInfoMatrix();
+        const infoMatrix = await butteProgram.Scrape();
 
         // Database class to populate models in database
-        const butteDatabase = new Database(programsMatrix);
-        await butteDatabase.insertPrograms();
-        await butteDatabase.insertDepartments().then(() => {
+        const butteDatabase = new Database(infoMatrix);
+        await butteDatabase.InsertData().then(() => {
           console.log('Database is full, Scrape Complete!')
         });
     }
