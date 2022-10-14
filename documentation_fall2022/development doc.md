@@ -1,31 +1,34 @@
 # Documentation for the ongoing development of SLOScrapper
 
 
-# General
+## General
 
 ![alt text](https://cdn.discordapp.com/attachments/1029756309660250144/1030279400803024966/pp.v5.png)
 
-# Software Team Lead
+Google Spreadsheet of [Bugs/issues](https://docs.google.com/spreadsheets/d/1bgnW1F7fxztyTgHTKJFAEqMXjWHt8w_NwMaPcE9aUZA/edit?resourcekey#gid=2000943100).
+
+
+## Software Team Lead
 
 
 
-# Back-end Developer
+## Back-end Developer
 
 
 
-# Database Administrator
+## Database Administrator
 
 
 
-# UI/UX Team Lead
+## UI/UX Team Lead
 
 
 
-# Software Architect
+## Software Architect
 
 
 
-# QA/TestTeam Lead 
+## QA/TestTeam Lead 
 
 
 
