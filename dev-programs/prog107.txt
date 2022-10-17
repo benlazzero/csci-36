@@ -1,0 +1,911 @@
+<!Doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Academic Programs - Butte College</title>
+    <meta name="description" content="Search Butte College degree and certificate programs to determine the right career and academic pathway for you.">
+    <meta name="keywords" content="programs, academic, certificates, degrees, guided pathways" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/img/manifest.json">
+    <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+    <!-- Meta Tags -->
+    <meta name="msapplication-config" content="assets/img/browserconfig.xml">
+    <meta name="theme-color" content="#d19f0e">
+    <meta name="msapplication-navbutton-color" content="#d19f0e">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#d19f0e">
+    <meta name="description" content="Search Butte College degree and certificate programs to determine the right career and academic pathway for you." />
+
+    <meta property="og:site_name" content="Butte-Glenn Community College" />
+    <meta property="og:title" content="Academic Programs - Butte College" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://www.butte.edu/_resources/img/social/facebook-share.png">
+    <meta property="og:url" content="https://programs.butte.edu/">
+    <meta property="og:description" content="Search Butte College degree and certificate programs to determine the right career and academic pathway for you." />
+    <meta property="fb:admins" content="1024245463" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://programs.butte.edu/">
+    <meta name="twitter:creator" content="@buttecollege">
+    <meta name="twitter:title" content="Butte-Glenn Community College">
+    <meta name="twitter:description" content="Search Butte College degree and certificate programs to determine the right career and academic pathway for you.">
+    <meta name="twitter:image" content="http://www.butte.edu/_resources/img/social/twitter-share.png">
+
+    <script>
+        document.createElement('header');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('nav');
+        document.createElement('footer');
+    </script>
+    <script type="text/javascript">
+        (function (d, t) {
+            var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            bh.type = 'text/javascript';
+            bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=op2k2icyizwbrz73fxuenw';
+            s.parentNode.insertBefore(bh, s);
+        })(document, 'script');
+    </script>
+    <script type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion_async.js"></script>
+    <script type="text/javascript" async="" id="inspsync" src="http://cdn.inspectlet.com/inspectlet.js?wid=1441418357&amp;r=443828"></script>
+    <script src="https://connect.facebook.net/signals/config/339957379889447?v=2.9.23&amp;r=stable" async=""></script>
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-M89QMM4"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-826299937"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-826299937');</script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M89QMM4');</script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-315003-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '339957379889447');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=339957379889447&amp;ev=PageView&amp;noscript=1" /></noscript>
+    <script type="text/javascript">
+        (function () {
+            window.__insp = window.__insp || [];
+            __insp.push(['wid', 1441418357]);
+            var ldinsp = function () {
+                if (typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=1441418357&r=' + Math.floor(new Date().getTime() / 3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x);
+            };
+            setTimeout(ldinsp, 0);
+        })();
+    </script>
+    <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/826299937/?random=1597782661654&amp;cv=9&amp;fst=1597782661654&amp;num=1&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=1&amp;u_tz=-420&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;gtm=2oa871&amp;sendb=1&amp;ig=1&amp;data=event%3Dgtag.config&amp;frm=0&amp;url=file%3A%2F%2F%2FC%3A%2FUsers%2Fbirdma%2FDownloads%2Ftracking-codes%2520(2).html&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
+
+
+</head>
+
+<body class="home">
+
+    <!-- Start Loading Overlay -->
+
+    <style>
+        #loading {
+            background-image: url('/assets/img/loading2.gif');
+            background-position: center center;
+            background-color: #000000;
+            background-repeat: no-repeat;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+        }
+    </style>
+
+    <div id="loading"></div>
+
+    <!-- End Loading Overlay -->
+    <!-- Start Header -->
+
+    <header>
+
+        <div id="logo">
+            <a href="https://www.butte.edu" title="Butte College Home"><img src="//www.butte.edu/_sm180/assets/img/butte-college-header-logo-2x.png" alt="Butte College" style="max-width:332px;"></a>
+        </div>
+
+        <div id="menu" class="hidden-lg hidden-md hidden-sm no-hover">
+            <a href="#" title="Site Menu"> <span class="icon-menu fa fa-bars"></span><span class="icon-menu fa fa-times hidden"></span> <strong>Menu</strong> </a>
+        </div>
+
+        <div id="apply">
+            <a href="https://www.butte.edu/apply" onclick="ga('send', 'event', 'button', 'click', 'applyNow');" title="Apply Now"> <span class="icon-apply"></span> <strong>Apply <span class="hidden-sixfourty">Now</span></strong> </a>
+        </div>
+
+        <div id="departments">
+            <!--added onclick to support hiding of camp fire Notice-->
+            <a href="#MassiveEducationalSupportServices" title="View All Departments, Programs, and Services" id="more" class="btn btn-yellow collapsed" role="button" data-toggle="collapse" aria-controls="MassiveEducationalSupportServices" aria-expanded="true">Departments  |  Programs  |  Services</a>
+
+
+        </div>
+
+        <div id="search">
+            <i class="fa fa-search" id="search-icon"></i>
+            <form id="search-form" action="//www.butte.edu/ou-search/" method="get" accept-charset="utf-8" target="_self">
+                <div id="search-overlay"></div>
+                <div id="search-container">
+                    <label for="search-box" class="hidden">Search</label>
+                    <input name="query" type="search" id="search-box" class="dark" placeholder="Type your search and press enter.">
+                    <button type="submit" value="Submit" aria-label="Search">
+                        <span class="icon-search"></span><span class="hidden">Go</span>
+                    </button>
+                    <div class="row hidden-xs">
+                        <div class="col-md-4">
+                            <a href="https://www.butte.edu/directory" class="btn btn-yellow mb-20 full-width search-button">Faculty &amp; Staff Directory</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="https://www.butte.edu/catalog" class="btn btn-yellow mb-20 full-width search-button">Course Catalog</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="https://www.butte.edu/calendars" class="btn btn-yellow mb-20 full-width search-button">Calendars &amp; Events</a>
+                        </div>
+                        <p class="hidden-xs pt-5 clear" style="color:white;">Click or tap anywhere to dismiss search.</p>
+                    </div>
+                    <button type="submit" value="Submit" aria-label="Search">
+                        <span class="icon-search"></span><span class="hidden">Go</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <nav>
+
+            <ul>
+                <li class="visible-sixfourty">
+                    <a href="https://www.butte.edu/" title="To Butte Home Page" class="nav-link">Home Page</a>
+                </li>
+                <li>
+                    <a href="https://programs.butte.edu/" title="All Degrees &amp; Certificates Offered" class="nav-link">Academic Programs</a>
+                </li>
+                <li>
+                    <a href="https://www.butte.edu/financialaid/" title="View Financial Aid Information" class="nav-link">Financial Aid</a>
+                </li>
+                <li>
+                    <a href="https://www.butte.edu/schedule/" title="Ways to search for classes" class="nav-link">Search for Classes</a>
+                </li>
+                <li>
+                    <a href="https://www.butte.edu/admissions/" title="View Admissions Information" class="nav-link">Admissions</a>
+                </li>
+                <li class="visible-sixfourty">
+                    <a href="#MassiveEducationalSupportServices" title="Departments" class="nav-link" role="button" data-toggle="collapse" aria-controls="MassiveEducationalSupportServices" aria-expanded="true">Departments, Programs, &amp; Services</a>
+                </li>
+                <div class="collapse col-md-12" id="MassiveEducationalSupportServices" aria-expanded="true" role="complementary">
+
+                    <div class="col-md-3">
+                        <ul class="list-unstyled">
+                            <li> <a href="https://www.butte.edu/AB540/">AB 540</a></li>
+                            <li> <a href="https://www.butte.edu/AB705/">AB 705</a></li>
+                            <li>
+                                <a href="https://www.butte.edu/academicsenate/">Academic Senate</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/accreditation">Accreditation</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/admissions/">Admissions and Records</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/athletics/">Athletics</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/trustees/">Board of Trustees</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/careerservices/">Career Services</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/careers/">Career &amp; Technical Programs</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/assessment/">Career and Academic Assessment Center</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/catalog/">Catalog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/cas/">Center for Academic Success<!--  (CAS) --></a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/classifiedsenate/">Classified Senate</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.butte.edu/community/about/mission_values.html">College Mission</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/collegepolice/">College Police</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/counseling/">Counseling &amp; Advising</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/curriculum/">Curriculum</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/dsps/">Disabled Students Programs &amp; Services</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/diversity">Diversity, Equity, &amp; Inclusion</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/eops/">EOPS</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/fpm/">Facilities Planning &amp; Management</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/staff/">Faculty and Staff Services</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/financialaid/">Financial Aid</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/foundation/">Foundation/Giving</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/fosterkinship/">Foster/Kinship</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/guidedpathways/">Guided Pathways</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.butte.edu/hr/">Human Resources</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/inspiringscholars/">Inspiring Scholars</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/international/">International Students</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/itss/">IT Services &amp; Support</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/jpce">Job Placement &amp; Cooperative Education</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/library/">Library</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/portal">MyBC Portal</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/instruction">Office of Instruction</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/president/">Office of The President</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/distance/">Online Classes</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/orientation/">Orientation</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/pba/">Planning, Budgeting &amp; Assessment</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/prodev/">Professional Development</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.butte.edu/promise">Promise Scholarship Program</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/careers/publicsafety/">Public Safety Education</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/rtc/">Regional Testing Center</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/safeplace/">Safe Place &amp; Wellness Program</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/foundation/scholarships.html">Scholarships</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/shc/">Student Health Clinic</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/slo/">Student Learning Outcomes</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/studentlife/">Student Life</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/studyabroad/">Study Abroad</a>
+                            </li>
+                            <!--<li>
+                                <a href="/sustainability/">Sustainability</a>
+                            </li>-->
+                            <li>
+                                <a href="https://www.butte.edu/titleix/">Title IX</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/transfer/">Transfer Counseling Center</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/veteransservices/">Veterans Services</a>
+                            </li>
+                            <li>
+                                <a href="https://www.butte.edu/welcomecenter">Welcome Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#MassiveEducationalSupportServices" class="close" role="button" data-toggle="collapse" aria-controls="MassiveEducationalSupportServices" aria-expanded="true"> <i class="fa fa-times fa-2x white"></i> <span class="hidden">Close</span> </a>
+                </div>
+
+                <li class="visible-sixfourty">
+                    <a href="https://www.butte.edu/portal" title="MyBC Portal" class="nav-link mybc">MyBC Portal</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- 2/26/2021 - Modified by Garreth Nedved  -->
+    </header>
+
+    <!-- End Header -->
+    <!-- Start Main Photo Area -->
+
+    <section id="title">
+        
+    <img src="/assets/img/programs/header2.jpg" alt="Academic Programs Banner Image" class="background">
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h1>Hair Styling</h1>
+            </div>
+
+        </div>
+
+    </div>
+
+    </section>
+
+    <!-- End Main Photo Area -->
+
+
+
+    
+    <!-- Start Sub Navigation -->
+
+    <section id="subnav" class="overflow-visible">
+
+        <div class="container unset">
+
+            <div class="col-md-12">
+
+                <div id="deplinks" class="row">
+
+                    <a href="#" title="Department Links" id="subdrop">Sub Navigation <i class="fa fa-caret-down"></i></a>
+
+                    <ul>
+                        <li>
+                            <a title="Search Programs" class="sublink" href="/">Search Programs</a>
+                        </li>
+                        <li>
+                            <a title="All Programs" class="sublink" href="/ProgramList/All/12/false">All Programs</a>
+                        </li>
+                        <li>
+                            <a title="Career Programs" class="sublink" href="/ProgramList/All/12/true">Career Programs</a>
+                        </li>
+                        <li>
+                            <a title="All Courses" class="sublink" href="/Courses/12">All Courses</a>
+                        </li>
+                    </ul>
+
+                    <div class="mybc-login catalogYearDrop">
+                        <a title="Calendar Year" target="_blank" id="catalogYearOpen"><i class="fa fa-calendar" aria-hidden="true"></i> <span id="yearSelected">2022-2023</span></a>
+                    </div>
+
+                    <div id="programYearsOverlay" class="hidden">
+                        <div class="container">
+                            <h3 class="white">Select Program Year</h3>
+                            <ul class="list-unstyled">
+
+                                        <li><a href="#" class="current">2022-2023</a></li>
+                                        <li><a href="/11">2021-2022</a></li>
+                                        <li><a href="/10">2020-2021</a></li>
+                                        <li><a href="/9">2019-2020</a></li>
+                                        <li><a href="/8">2018-2019</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- End Sub Navigation -->
+
+
+
+
+
+
+    <!-- Start Content Area -->
+    
+
+
+
+
+
+
+<!-- Start Content Area -->
+<section class="content" id="program-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-lg-push-3 mb-30">
+                <div class="row" id="description">
+                    <div class="col-md-12">
+                        <h3>About the Program</h3>
+                        <p><p>This certificate will prepare students&nbsp;to perform basic skills in hairstyling and haircutting. In addition, demonstrate the ability to perform the basic analytical skills to perform relevant skills for an entry-level position in Cosmetology.&nbsp; The student will be able to demonstrate hairstyling and haircutting skills, safety and sanitation, communication and soft skills, and knowledge necessary to pass the State Board exam successfully. Upon completing the training, students will gain competency in entry-level job positions as a hairstylist or related career goals.</p></p>
+
+                        <hr />
+                    </div>
+                </div>
+                <div class="row" id="degrees">
+                    <div class="col-md-12">
+                        <h3 id="at-a-glance">Program Requirements</h3>
+
+                        <div class="faqs pb-15">
+                            <div class="faq">
+                                <div class="question" role="tablist" id="faqHeading">
+                                    <h5>
+                                        <a href="#faqOne" aria-controls="faqOne" data-toggle="collapse" aria-expanded="true" class="extra-bold">
+                                            Certificate in Hair Styling <i class="fa fa-plus adjusted"></i>
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="faqOne" class="collapse answer in pt-15" aria-labelledby="faqHeading" role="tabpanel" aria-expanded="true">
+                                    <p><strong>Program Code:</strong> HAIRSTYLING.CC</p>
+                                    <p><strong>Type:</strong> Career</p>
+                                    <p><strong>General Education:</strong> None</p>
+
+
+                                    <p class="pt-15"><strong>Student Learning Outcomes:</strong></p>
+                                    <p>Upon successful completion of this program, the student will be able to:</p>
+                                    <ul class="dots">
+                                            <li><p>Safely and accurately use all equipment and products relating to the industry.</p></li>
+                                            <li><p>Demonstrate the most current methods and procedures using professional tools and equipment.</p></li>
+                                            <li><p>Apply necessary health and safety rules.</p></li>
+                                            <li><p>Demonstrate appropriate communication skills.</p></li>
+                                            <li><p>Demonstrate an orderly performance of all tasks and skills in hairstyling and haircutting establishing methodical habits without sacrificing artistic skills.</p></li>
+                                    </ul>
+                                    
+                                        <p class="pt-15"><a class="program-map btn btn-yellow" id="mapLink" href="/ProgramMap/12/2649">Click Here for Program Map</a></p>
+
+                                    <div class="row pt-20 pb-5 mt-5">
+                                        <div class="col-md-10"><strong>Required courses:</strong></div>
+                                        <div class="col-md-2">
+                                            <strong>
+15                                                Units
+                                            </strong>
+                                        </div>
+                                    </div>
+
+
+                                            <div class="row pt-10" id="p1class1">
+                                                <a href="#p1classDetail1" data-toggle="collapse" aria-controls="catalogFilters" aria-expanded="true" class="classLinks">
+                                                    <div class="col-md-2">
+COS 10                                                    </div>
+
+                                                    <div class="col-md-8">HealthSafetySanitaiton Theory</div>
+                                                    
+                                                    <div class="col-md-2">
+3                                                        
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="row collapse p-15" id="p1classDetail1" aria-expanded="true" role="complementary">
+                                                <div class="col-md-12 greybg p-15 font-14">
+                                                        <p><strong>Prerequisite(s):</strong>   Admission to the Cosmetology Program </p>
+                                                                                                        <p><strong>Transfer Status:</strong> CSU</p>
+                                                    <p>
+                                                        <em>
+                                                            51 hours Lecture
+                                                        </em>
+                                                    </p>
+                                                    <p>This course will teach standard health, safety, and sanitation practices in cosmetology, barbering, manicuring, and esthetics. Students will understand agency standards and state board requirements for beauty professionals servicing the general public.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-10" id="p1class2">
+                                                <a href="#p1classDetail2" data-toggle="collapse" aria-controls="catalogFilters" aria-expanded="true" class="classLinks">
+                                                    <div class="col-md-2">
+COS 11                                                    </div>
+
+                                                    <div class="col-md-8">Hlth, Safety &amp; Sanit Practicum</div>
+                                                    
+                                                    <div class="col-md-2">
+4                                                        
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="row collapse p-15" id="p1classDetail2" aria-expanded="true" role="complementary">
+                                                <div class="col-md-12 greybg p-15 font-14">
+                                                        <p><strong>Prerequisite(s):</strong>   Admission to the Cosmetology Program </p>
+                                                                                                        <p><strong>Transfer Status:</strong> CSU</p>
+                                                    <p>
+                                                        <em>
+                                                            0 hours Lecture
+/ 215 hours Lab                                                        </em>
+                                                    </p>
+                                                    <p>This course will teach standard health, safety, and sanitation practices in cosmetology, barbering, manicuring, and esthetics. Students will demonstrate state board practices for beauty professionals while servicing the general public.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-10" id="p1class3">
+                                                <a href="#p1classDetail3" data-toggle="collapse" aria-controls="catalogFilters" aria-expanded="true" class="classLinks">
+                                                    <div class="col-md-2">
+COS 19                                                    </div>
+
+                                                    <div class="col-md-8">Hair Styling Services I</div>
+                                                    
+                                                    <div class="col-md-2">
+4                                                        
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="row collapse p-15" id="p1classDetail3" aria-expanded="true" role="complementary">
+                                                <div class="col-md-12 greybg p-15 font-14">
+                                                                                                        <p><strong>Transfer Status:</strong> CSU</p>
+                                                    <p>
+                                                        <em>
+                                                            0 hours Lecture
+/ 215 hours Lab                                                        </em>
+                                                    </p>
+                                                    <p>In this course students will develop their skills in all aspects of hair cutting and styling. Topics include client consultation, applying industry standard health and safety protocols, haircutting, and formal styling. Students will work towards California Board of Barbering and Cosmetology minimum practical operations in subjects learned.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-10" id="p1class4">
+                                                <a href="#p1classDetail4" data-toggle="collapse" aria-controls="catalogFilters" aria-expanded="true" class="classLinks">
+                                                    <div class="col-md-2">
+COS 29                                                    </div>
+
+                                                    <div class="col-md-8">Hair Styling Services II</div>
+                                                    
+                                                    <div class="col-md-2">
+4                                                        
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="row collapse p-15" id="p1classDetail4" aria-expanded="true" role="complementary">
+                                                <div class="col-md-12 greybg p-15 font-14">
+                                                        <p><strong>Prerequisite(s):</strong>  COS 19 </p>
+                                                                                                        <p><strong>Transfer Status:</strong> CSU</p>
+                                                    <p>
+                                                        <em>
+                                                            0 hours Lecture
+/ 215 hours Lab                                                        </em>
+                                                    </p>
+                                                    <p>In this course students will develop and demonstrate core hairdressing skills. Emphasis is placed on client draping, shampooing and conditioning, fundamentals of hair design and basic hairstyling techniques. Students will work towards California Board of Barbering and Cosmetology minimum hours and operations in subjects learned.</p>
+                                                </div>
+                                            </div>
+
+                                </div>
+                            </div>
+                        </div> <!-- end faqs -->
+
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-12 mb-30"></div>
+
+                <!-- Hiding Student Videos per WO 110729
+                <div class="row" id="students">
+                    <div class="col-md-12">
+                        <h3 id="at-a-glance">Student Experiences</h3>
+
+                        <div id="video-slider2" class="pt-30 greynav-dots">
+
+                            <div class="video-slide slide">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/Es3gYXzWDO8?rel=0&amp;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <div class="video-slide slide">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/cYcUEsoA0Oc?rel=0&amp;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <div class="video-slide slide">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/O9b6XXnUBRo?rel=0&amp;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                -->
+            </div>
+            <div class="col-lg-3 col-lg-pull-9">
+
+                <div id="fixedSideBar">
+                    <div id="sideMenu" class="visible-lg">
+                        <h3>
+                            <i class="fa fa-bars float-left pr-5 mr-5 up-1"></i><span class="visible-sixfourty float-left">Sub</span>Menu
+                        </h3>
+                        <ul id="sidenav" class="nav nav-pills nav-stacked links mb-30">
+                            <li><a id="link1" href="#description" class="side-menu-active scroll"><span>About the Program</span></a></li>
+                            <li><a id="link4" href="#degrees" class="scroll"><span>Program Requirements</span></a></li>
+                            <!--<li><a id="link5" href="#faculty" class="scroll"><span>Meet the Faculty</span></a></li>-->
+                            <li><a id="link6" href="#students" class="scroll"><span>Student Experiences</span></a></li>
+                        </ul>
+                    </div>
+                            <div class="bg-darkgray-1 p-15 border-radius-5 white mb-30">
+                                <h4 class="lineheight">Contacts</h4>
+                                    <p>Kim Kirkwood, Chair  <br><a href="tel:15308952294">(530) 895-2294</a></p>
+
+                                    <p>Department Office: Cosmetology and Barbering Center <br><a href="tel:15308952202">(530) 895-2202</a></p>
+
+                                <p>Counseling and Advising: <br><a href="tel:15308952378">(530) 895-2378</a></p>
+                            </div>
+
+                            <div id="socialBox" class="greybg p-15 mb-30">
+                                <h4>Follow Us on Social Media </h4>
+                                <ul class="social-icons-list">
+                                    <li>
+                                        <a href="https://www.facebook.com/ButteCollege" title="Follow us on Facebook" target="_blank"><i class="fa fa-facebook fa-lg"></i><span class="hidden">Facebook</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCRZRDr944pc4c_SJK1s-v7w" title="View Our Videos on Youtube" target="_blank"><i class="fa fa-youtube fa-lg"></i><span class="hidden">Youtube</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/buttecollege" title="Follow us on Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i><span class="hidden">Twitter</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.flickr.com/photos/144060536@N05/albums" title="Follow us on Flickr" target="_blank"><i class="fa fa-flickr fa-lg"></i><span class="hidden">Flickr</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/buttecollege/" title="Follow us on Instagram" target="_blank"><i class="fa fa-instagram fa-lg"></i><span class="hidden">Instagram</span></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</section>
+    <!-- End Content Area -->
+    <!-- Begin Main Footer -->
+    <footer class="blackbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-push-4">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <h3>Campus Life</h3>
+                            <ul>
+                                <li><a href="https://www.butte.edu/athletics/">Athletics</a></li>
+                                <li><a href="http://buttecollegebookstore.com/">Bookstore</a></li>
+                                <li><a href="https://www.butte.edu/maps/">Campus Map</a></li>
+                                <li><a href="https://www.butte.edu/library/">Library</a></li>
+                                <li><a href="https://www.butte.edu/highschool/parents/request_tour.html" onclick="_gaq.push(['_trackEvent','RequestTour','Click', 'subPages']);">Request a Tour</a></li>
+                                <li><a href="/studentlife/">Student Life</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><a onclick="_gaq.push(['_trackEvent','A11y','GlobalLink','a11lS7tSubPages']);" href="https://www.butte.edu/accessibilitystatement">Accessibility Statement</a></li>
+                                <li><a href="https://www.butte.edu/bus">Bus Schedule</a></li>
+                                <li><a href="https://www.butte.edu/calendars/">Calendars</a></li>
+                                <li><a href="https://www.butte.edu/catalog/">Catalog</a></li>
+                                <li><a href="https://www.butte.edu/international/">International Students</a></li>
+                                <li><a href="https://www.butte.edu/directory/">Staff Directory</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <h3>Information</h3>
+                            <ul>
+                                <li><a href="https://www.butte.edu/accreditation">Accreditation</a></li>
+                                <li><a href="https://www.butte.edu/diversity">Diversity</a></li>
+                                <li><a href="https://www.butte.edu/hr/">Employment</a></li>
+                                <li><a href="https://www.butte.edu/foundation/">Make a Gift</a></li>
+                                <li><a href="https://www.butte.edu/onlineclasses/" onclick="_gaq.push(['_trackEvent','OnlineClassesPage','Click', 'subPages']);">Online Classes</a></li>
+                                <li><a href="https://www.butte.edu/foundation/scholarships.html">Scholarships</a></li>
+                                <li><a href="https://selfservice.butte.edu/Student/Courses">Search for Classes</a></li>
+                                <li><a href="https://www.butte.edu/privacy">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-pull-8">
+                    <div class="contact">
+                        <div class="col-sm-5 col-xs-12 circle-logo">
+                            <img src="//www.butte.edu/_sm180/assets/img/butte-college-circle-logo.png" alt="Butte College Logo" class="img-full">
+                        </div>
+                        <div class="col-sm-7 col-xs-12 address">
+                            <p>
+                                <a href="https://goo.gl/maps/gx8hjCkTvBJ2" target="_blank" rel="noopener" title="Get Directions" class="directions">
+                                    3536 Butte Campus Drive
+                                    <br />
+                                    Oroville, CA 95965
+                                </a>
+                            </p>
+                            <p>
+                                <a href="tel:+15308952511" class="Call Us">530-895-2511</a>
+                            </p>
+                            <p>
+                                <a href="mailto:questions@butte.edu" title="Email Us">questions@butte.edu</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/buttecollege/" onclick="_gaq.push(['_trackEvent','social','clicked', 'instagram-home']);" target="_blank" rel="noopener" title="Instagram"><i class="fa fa-instagram"></i><span class="hidden">Instagram</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/ButteCollege" onclick="_gaq.push(['_trackEvent','social','clicked', 'facebook-home']);" target="_blank" rel="noopener" title="Facebook"><i class="fa fa-facebook"></i><span class="hidden">Facebook</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCRZRDr944pc4c_SJK1s-v7w" onclick="_gaq.push(['_trackEvent','social','clicked', 'youtube-home']);" target="_blank" rel="noopener" title="YouTube"><i class="fa fa-youtube"></i><span class="hidden">Youtube</span></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/buttecollege" onclick="_gaq.push(['_trackEvent','social','clicked', 'twitter-home']);" target="_blank" rel="noopener" title="Twitter"><i class="fa fa-twitter"></i><span class="hidden">Twitter</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/edu/school?id=31995" onclick="_gaq.push(['_trackEvent','social','clicked', 'linkedin-home']);" target="_blank" rel="noopener" title="Linkedin"><i class="fa fa-linkedin"><span class="hidden">Linkedin</span></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.flickr.com/photos/144060536@N05/albums" onclick="_gaq.push(['_trackEvent','social','clicked', 'flickr-home']);" target="_blank" rel="noopener" title="Flickr"><i class="fa fa-flickr"></i><span class="hidden">Flickr</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <ul id="footer-links">
+                            <li class="col-md-6 col-sm-6 col-xs-12">
+                                <a href="https://www.butte.edu/curriculum/adt.html" title="Associate Degree for Transfer Information"><img src="//www.butte.edu/_sm180/assets/img/associate-degree-for-transfer-logo.png" alt="Associate Degree for Transfer"></a>
+                            </li>
+                            <li class="col-md-6 col-sm-6 col-xs-12">
+                                <a href="http://bit.ly/SalarySurfer" title="Learn about Salary Surfer"><img src="//www.butte.edu/_sm180/assets/img/salary-surfer-logo.png" alt="Salary Surfer"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" style="padding:1em;">
+                    <div class="col-md-5 col-md-offset-4 text-center-mobile" style="margin-top:-4.15em; font-size:.875em;color:#999; line-height:1.5;">Butte College does not permit discrimination or harassment in its programs or activities as stated in our <a href="https://www.butte.edu/titleix" class="yellow white-hover">Non-Discrimination Statement</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 2/26/2021 - Modified by Garreth Nedved - New MyBC links -->
+    <!-- End Footer Callout -->
+
+
+    
+    
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+        </script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022\/lib\/jquery\/jquery.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS">
+        </script>
+<script>(window.jQuery && window.jQuery.fn && window.jQuery.fn.modal||document.write("\u003Cscript src=\u0022\/lib\/twitter-bootstrap\/js\/bootstrap.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\u0022\u003E\u003C\/script\u003E"));</script>
+
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+<meta name="x-stylesheet-fallback-test" content="" class="sr-only" /><script>!function(a,b,c,d){var e,f=document,g=f.getElementsByTagName("SCRIPT"),h=g[g.length-1].previousElementSibling,i=f.defaultView&&f.defaultView.getComputedStyle?f.defaultView.getComputedStyle(h):h.currentStyle;if(i&&i[a]!==b)for(e=0;e<c.length;e++)f.write('<link href="'+c[e]+'" '+d+"/>")}("position","absolute",["\/lib\/twitter-bootstrap\/css\/bootstrap.min.css"], "rel=\u0022stylesheet\u0022 integrity=\u0022sha384-1q8mTJOASx8j1Au\u002Ba5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\u0022 crossorigin=\u0022anonymous\u0022 ");</script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<meta name="x-stylesheet-fallback-test" content="" class="fa" /><script>!function(a,b,c,d){var e,f=document,g=f.getElementsByTagName("SCRIPT"),h=g[g.length-1].previousElementSibling,i=f.defaultView&&f.defaultView.getComputedStyle?f.defaultView.getComputedStyle(h):h.currentStyle;if(i&&i[a]!==b)for(e=0;e<c.length;e++)f.write('<link href="'+c[e]+'" '+d+"/>")}("font-family","FontAwesome",["\/lib\/font-awesome\/css\/font-awesome.min.css"], "rel=\u0022stylesheet\u0022 ");</script>
+
+    
+
+
+    <script src="/assets/js/jquery.truncate.js"></script>
+    <script src="/assets/js/jquery.matchHeight.js"></script>
+    <script src="/assets/js/modernizr-custom.js"></script>
+    <script src="/assets/js/scripts.js"></script>
+
+    
+
+    <!-- Butte Base Styles -->
+    <link rel="stylesheet" type="text/css" href="//www.butte.edu/_resources/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="//www.butte.edu/_resources/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="//www.butte.edu/_resources/css/responsive.css" />
+
+
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+
+    <!-- End Fonts -->
+
+
+    <!-- End Stylesheets -->
+    <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+</body>
+</html>
+
