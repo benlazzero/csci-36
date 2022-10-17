@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio"; 
 import FetchHtml from './utilities/helpers.js';
+import fs from 'fs';
 
 // Handles all fetching and parsing
 // Takes in text-html of the 'all programs' page of the year you want to scrape
@@ -80,7 +81,9 @@ class Program {
     // grabbing all html from each program
     for (let i = 0; i < totalLinks; i++) {
       console.log((i+1) + '/' + totalLinks);
-      const currentProgram = await FetchHtml(this.programInfo[0][i])
+      const currentProgram = fs.readFileSync('./dev-programs/prog' + (i+1) + '.txt', 'utf8', function(err){
+        if (err) throw err;
+      })
       allPrograms.push(currentProgram);
     }
     this.insideProgramsArray = allPrograms;
