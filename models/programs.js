@@ -1,21 +1,21 @@
 const programModel = (sequelize, dataTypes) => {
     const programs = sequelize.define('programs', {
         prog_id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
-            //autoIncrement: true
+            autoIncrement: true
         },
         prog_code: {
-            type: dataTypes.TEXT,
-            //allowNull: false,
+            type: dataTypes.STRING(250),
+            allowNull: false,
         },
         prog_name: {
             type: dataTypes.TEXT,
-            //allowNull: false
+            allowNull: false
         },
         prog_type: {
             type: dataTypes.TEXT,
-            //allowNull: false
+            allowNull: false
         },
         prog_desc: {
             type: dataTypes.TEXT,
@@ -33,6 +33,7 @@ const programModel = (sequelize, dataTypes) => {
             type: dataTypes.TEXT
         }
     });
+    
     return programs;
 };
 
