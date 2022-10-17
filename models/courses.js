@@ -6,11 +6,11 @@ const courseModel = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         cour_name: {
-            type: dataTypes.STRING(255),
+            type: dataTypes.STRING(250),
             allowNull: false
         },
         cour_desc: {
-            type: dataTypes.TEXT,
+            type: dataTypes.TEXT('long'),
             allowNull: false
         }
     });

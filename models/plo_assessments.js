@@ -9,6 +9,9 @@ const ploAssessmentsModel = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER.UNSIGNED,
             allowNull: false,
             primaryKey: true,
+        },
+        plo_assess_date: {
+            type: dataTypes.DATE,
         }
     });
     

@@ -11,8 +11,8 @@ import { coutcomeModel } from '../models/coutcomes.js';
 import { poutcomeModel } from '../models/poutcomes.js';
 
 // Our join tables
-// import { ploAssessmentsModel } from '../models/plo_assessments.js';
-// import { proCourseModel } from '../models/programs_courses.js';
+import { ploAssessmentsModel } from '../models/plo_assessments.js';
+import { proCourseModel } from '../models/programs_courses.js';
 
 // Our function that creates our FKs
 import { buildAssociations } from '../models/associates.js';
@@ -50,8 +50,8 @@ const assessments = assessmentModel(sequelize, Sequelize);
 
 const coutcomes = coutcomeModel(sequelize, Sequelize);
 const poutcomes = poutcomeModel(sequelize, Sequelize);
-// const ploassessments = ploAssessmentsModel(sequelize, Sequelize);
-// const procourses = ploAssessmentsModel(sequelize, Sequelize);
+const ploAssessments = ploAssessmentsModel(sequelize, Sequelize);
+const proCourses = proCourseModel(sequelize, Sequelize);
 
 buildAssociations(sequelize);
 

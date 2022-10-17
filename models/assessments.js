@@ -1,7 +1,7 @@
 const assessmentModel = (sequelize, dataTypes) => {
     const assessments = sequelize.define('assessments', {
         discussion_id: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull: false,
             primaryKey: true,
         },
@@ -18,7 +18,7 @@ const assessmentModel = (sequelize, dataTypes) => {
             allowNull: true,
         },
         discipline_area: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(15),
             allowNull: false,
         },
         assesed_courses: {
@@ -26,7 +26,7 @@ const assessmentModel = (sequelize, dataTypes) => {
             allowNull: true,
         },
         assessed_programs: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(200),
             allowNull: true,
         },
         assessed_ilos: {

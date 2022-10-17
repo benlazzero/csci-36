@@ -6,7 +6,7 @@ const programModel = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         prog_code: {
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING(250),
             allowNull: false,
         },
         prog_name: {
