@@ -1,5 +1,5 @@
 import express from 'express';
-import { programs } from '../sequelize.js';
+import { programs } from '../database/sequelize.js';
 
 const router = express.Router();
 

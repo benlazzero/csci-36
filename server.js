@@ -3,8 +3,9 @@ import express from 'express';
 import expressLayouts from 'express-ejs-layouts';
 
 // Bringing in models, modules, and routes
-import { departments, programs} from './sequelize.js';
-import scrapeProgramList from './scraper.js';
+import { departments, programs } from './database/sequelize.js'; // models from DB for read/write
+import { FetchHtml, Program } from './scraper.js';
+import Database from './database/database.js';
 import indexRoute from './routes/index.js';
 import departmentRoute from './routes/departments.js';
 import programRoute from './routes/programs.js';
@@ -26,19 +27,30 @@ server.use(departmentRoute);
 server.use(programRoute);
 server.use(formRoute);
 
-// a hack/exception-exploit so we dont have to comment out scraper after 1st run
-// If tables cant be counted == tables dont exist -> run scraper
-// If tables can be counted == tables exist -> dont run scraper
-// NOTE: if you stop scraper midway you will have to delete tables in mysql then run server again for full scrape
-try {
-  const progDB = await programs.findAndCountAll();
-  const deptDB = await departments.findAndCountAll();
-} catch(error) {
-  console.log(error);
-  await scrapeProgramList();
-}
-
 // start nodejs server, It will listen for requests on PORT.
-server.listen(PORT, () => {
-    console.log(`Listening: http://localhost:${PORT}`);
+server.listen(PORT, async () => {
+    console.log(`Listening on Port: ${PORT}`);
+
+    // to run the scraper or not to run the scraper...
+    try {
+      const progDB = await programs.findAndCountAll();
+      const deptDB = await departments.findAndCountAll();
+    } catch(error) {
+        // side effects like crazy because this is a web scraper...
+        // awaits are simply stating 'we need this request to come back before proceding'
+        
+        // Get html from year to scrape
+        const butteAllProgramsUrl = "https://programs.butte.edu/ProgramList/All/12/false"
+        let butteAllProgramsHtml = await FetchHtml(butteAllProgramsUrl);
+
+        // Program class used to get infoMatrix of all data
+        const butteProgram = new Program(butteAllProgramsHtml);
+        const infoMatrix = await butteProgram.Scrape();
+
+        // Database class to populate models in database
+        const butteDatabase = new Database(infoMatrix);
+        await butteDatabase.InsertData().then(() => {
+          console.log('Database is full, Scrape Complete!')
+        });
+    }
 });

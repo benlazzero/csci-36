@@ -1,4 +1,0 @@
-scraper/*/__pycache__
-*/__pycache__
-scraper/programs/pageCache.json
-/database/*.sql

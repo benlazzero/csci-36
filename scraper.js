@@ -1,97 +1,181 @@
-import fetch from "node-fetch"; // for the http request 
-import cheerio from "cheerio"; // parsing library
-import { departments, programs} from './sequelize.js'; // models from DB for read/write
+import * as cheerio from "cheerio"; 
+import FetchHtml from './utilities/helpers.js';
 
-// scraper implementation is 'brute force' to say the least. 
-// this is maybe the least important to understand at this point, I would look this over last.
+// Handles all fetching and parsing
+// Takes in text-html of the 'all programs' page of the year you want to scrape
+// Returns a matrix of info to be used to hydrate models in database
+// NOTE: private methods are weird in JS so they are not used, but the only real public method is getandorderinfomatrix()
+class Program {
+  constructor(fetchedHtml) {
+    this.$ = cheerio.load(fetchedHtml);
+    this.allProgramsObject = this.$(".content").find("tbody").find('tr');
+    this.insideProgramsArray = [];
+    this.totalPrograms = this.allProgramsObject.length;
+    this.programInfo = [];
+    this.butteUrl = "https://programs.butte.edu";
+  }
+  
+  GetProgramLinks = () => {
+    let programLinks = [];
+    let Index = 0;
+    while(Index < this.totalPrograms) {
+      let currentLink = this.butteUrl + this.$(this.allProgramsObject[Index]).find('a').attr('href');
+      programLinks.push(currentLink);
+      Index = Index + 1;
+    }
+    return programLinks;
+  }
+  
+  GetProgramNames = () => {
+    let programNames = [];
+    let Index = 0;
+    while(Index < this.totalPrograms) {
+      let currentName = this.$(this.allProgramsObject[Index]).find('a').first().text().trim();
+      programNames.push(currentName);
+      Index = Index + 1;
+    }
+    return programNames;
+  }
+  
+  GetProgramTypes = () => {
+    let programTypes = [];
+    let Index = 0;
+    while(Index < this.totalPrograms) {
+      let currentType = this.$(this.allProgramsObject[Index]).find("td").eq(0).text().trim();
+      programTypes.push(currentType);
+      Index = Index + 1;
+    }
+    return programTypes;
+  }
+  
+  GetProgramDepts = () => {
+    let programDepts = [];
+    let Index = 0;
+    while(Index < this.totalPrograms) {
+      let currentDept = this.$(this.allProgramsObject[Index]).find("td").eq(1).text().trim();
+      programDepts.push(currentDept);
+      Index = Index + 1;
+    }
+    return programDepts;
+  }
+  
+  GetProgramCodes = () => {
+    let programCodes = [];
+    let Index = 0;
+    while(Index < this.totalPrograms) {
+      let currentCode = this.$(this.allProgramsObject[Index]).find("td").last().text().trim();
+      programCodes.push(currentCode);
+      Index = Index + 1;
+    }
+    return programCodes;
+  }
 
-async function scrapeProgramList() {
-    // temporary fix for duplicate primary keys being entered on intial scrape -> DB.
-    let currentid = 1; 
-    //
-    
-    const programListRes = await fetch("https://programs.butte.edu/ProgramList/All/10/false"); // streams the program list in binary or hex or something 
+  // Start of methods for 2nd fetch, in each program
+  // Uses links from the all programs page
+  // loops through following each link and grabbing the html 
+  // dumps that into an array in class variables
+  FetchEachProgram = async () => {
+    let allPrograms = [];
+    const totalLinks = this.programInfo[0].length;
+    // grabbing all html from each program
+    for (let i = 0; i < totalLinks; i++) {
+      console.log((i+1) + '/' + totalLinks);
+      const currentProgram = await FetchHtml(this.programInfo[0][i])
+      allPrograms.push(currentProgram);
+    }
+    this.insideProgramsArray = allPrograms;
+  }
+  
+  GetProgramsAbouts = () => {
+    let programsAbouts = [];
+    const totalPrograms = this.insideProgramsArray.length;
+    for (let i = 0; i < totalPrograms; i++) {
+      // Pull in next program from array and set up parser
+      this.$ = cheerio.load(this.insideProgramsArray[i]);
+      const programContent = this.$(".content");
+      // Get program about section, add place holder if their isnt one.
+      let aboutSection = programContent.find("#description:nth-child(1)").find('p').text();
+      if (aboutSection.length == 0) {
+        aboutSection = 'Needs about section'; 
+      };
+      // Push current about to function scope array
+      programsAbouts.push(aboutSection);
+    }
+    return programsAbouts;
+  }
 
-    const programListText = await programListRes.text(); // decodes that to utf-8 or ascii so we can read it
-    let $ = cheerio.load(programListText); // pretty sure this makes a DOM tree from all the html that can be parsed by the cheerio lib, like preprocessing
-    
-    // grabbing specific classes or tags?
-    const programListContent = $(".content");
-    const tbody = programListContent.find("tbody");
+  GetProgramsChairs = () => {
+    let programsChairs = [];
+    const totalPrograms = this.insideProgramsArray.length;
+    for (let i = 0; i < totalPrograms; i++) {
+      // Pull in next program from array and set up parser
+      this.$ = cheerio.load(this.insideProgramsArray[i]);
+      const programContent = this.$(".content");
+      // Get chair of program
+      let chair = programContent.find(".bg-darkgray-1.p-15.border-radius-5.white.mb-30").find("p").first().text().trim(); 
+      chair = chair.split(",")[0];
+      // Push current chair to function scope array
+      programsChairs.push(chair);
+    }
+    return programsChairs;
+  }
+  
+  GetProgramsSlos = () => {
+    let programsSlos = [];
+    const totalPrograms = this.insideProgramsArray.length;
+    for (let i = 0; i < totalPrograms; i++) {
+      // Pull in next program from array and set up parser
+      this.$ = cheerio.load(this.insideProgramsArray[i]);
+      const programContent = this.$(".content");
+      // This pushes an array of a programs slos into an array of all programs slos
+      let currentSloStore = []
+      let allProgramsScoped = this.insideProgramsArray;
+      programContent.find(".dots").children().each(function (j, elem) {
+        let $$ = cheerio.load(allProgramsScoped[i])
+        currentSloStore[j] = $$(elem).text().trim();
+      });
+      programsSlos.push(currentSloStore);
+    }
+    return programsSlos;
+  }
+  
+  // populate infoMatrix class variable with data from all programs page
+  SetAllPrograms = () => {
+    let links = this.GetProgramLinks();
+    let names = this.GetProgramNames();
+    let types = this.GetProgramTypes();
+    let depts = this.GetProgramDepts();
+    let codes = this.GetProgramCodes();
+    this.programInfo.push(links);
+    this.programInfo.push(names);
+    this.programInfo.push(types);
+    this.programInfo.push(depts);
+    this.programInfo.push(codes);
+  }
+  
+  // populate infoMatrix class variable with data from inside each program
+  SetAllInnerPrograms = () => {
+    let abouts = this.GetProgramsAbouts();
+    let chairs = this.GetProgramsChairs();
+    let slos = this.GetProgramsSlos();
+    this.programInfo.push(abouts);
+    this.programInfo.push(chairs);
+    this.programInfo.push(slos);
+  }
 
-    const programScraper = tbody.find("tr").each(async function (i, elem) {
-        console.log(elem);
-        const name = $(this).find("a").first().text().trim(); // gets name of program
-        const link = "https://programs.butte.edu" + $(this).find("a").attr("href"); // gets link to program's page
-        const type = $(this).find("td").eq(0).text().trim(); // type of program (Cert, AS, AA, etc...)
-        const dept = $(this).find("td").eq(1).text().trim(); // department that the program belongs to
-        const code = $(this).find("td").last().text().trim(); // program code
-        let SLOs = []; // array for SLOs
-
-        // Go into programs page for slo's, etc..
-        const programRes = await fetch(link);
-        const programText = await programRes.text();
-        $ = cheerio.load(programText);
-        const programPageContent = $(".content");
-        const programAbout = programPageContent.find("p").first().text(); // Description of the program
-        let chair = programPageContent
-            .find(".bg-darkgray-1.p-15.border-radius-5.white.mb-30")
-            .find("p")
-            .first()
-            .text()
-            .trim(); // Program chair
-        chair = chair.split(",")[0]; // removes extra info from chair string
-
-        let program = {};
-        
-        // Adds data to JSON object
-        program.name = name;
-        program.type = type;
-        program.department = dept;
-        program.code = code;
-        program.chair = chair;
-        program.about = programAbout;
-        program.slos = [];
-        program.link = link;
-        program.id = currentid; //NOTICE: currentid var "hack" is here to avoid duplicate primary keys from last class
-
-        const sloScraper = programPageContent
-            .find(".dots")
-            .children()
-            .each(function (i, elem) {
-                program.slos[i] = $(this).text().trim();
-            });
-
-        // DEBUGGING
-        // Once database is set-up this will no longer be used
-        console.log(program);
-        console.log("----------------------------------------");
-        //
-
-        // SQL DATABASE 
-        // this is where the push to DB happends
-        // the currentid var "hack" is implemented here
-        const newProgram = await programs.create({
-            prog_id: currentid,
-            prog_code: program.code,
-            prog_name: program.name,
-            prog_type: program.type,
-            prog_desc: program.about,
-            prog_dept: program.department,
-            prog_slos: program.slos.join(', '),
-        }).then(currentid = currentid + 1);
-
-        const existingDept = await departments.findOne({
-            where: {dept_name: program.department}
-        })
-        if (existingDept == null) {
-            const newDepartment = await departments.create({
-                dept_id: program.id,
-                dept_name: program.department,
-                dept_chair: program.chair
-            });
-        }
-    });
+  // This is the only method that should be used from the class outside of the class
+  // something like encapsulation minus the part that enforces it... lol
+  Scrape = async () => {
+    // setting the infoMatrix with links/names/types/depts/codes.
+    this.SetAllPrograms();
+    // performing the second fetch with links from setAllPrograms().
+    await this.FetchEachProgram();
+    // setting the infoMatrix with abouts/chairs/slos.
+    this.SetAllInnerPrograms();
+    // returns the multi-d array 
+    return this.programInfo; 
+  }
 }
 
-export default scrapeProgramList;
+// fetch can to be used to construct class outside of here
+export { FetchHtml, Program };

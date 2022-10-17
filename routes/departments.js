@@ -1,5 +1,5 @@
 import express from 'express';
-import { departments } from '../sequelize.js';
+import { departments } from '../database/sequelize.js';
 
 const router = express.Router();
 
