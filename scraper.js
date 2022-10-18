@@ -158,7 +158,6 @@ class Program {
       programContent.find(".classLinks").children().each(function (j, elem) {
         let $$ = cheerio.load(allProgramsScoped[j])
         currentCoursesStore.push($$(elem).text().trim());
-        console.log($$(elem).text().trim());
       }) 
       // format the data so each index is a full course description
       let numberOfCourses = currentCoursesStore.length / 3;
