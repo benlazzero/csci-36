@@ -1,6 +1,7 @@
 import { departments, programs } from './sequelize.js';
 // InfoMatrix Key:
-// [links, names, types, depts, codes, abouts, chairs, [slos]]
+// [links, PROG_NAME, DEG_TYPE, DEP_NAME, PROG_CODE, PROG_DESC, DEP_CHAIR, [PROG_SLO], [COUR_NAME]]
+// TODO: COUR_DESC
 
 // Same thing that was happening before just with a matrix
 // As the models grow or change we can just add methods here without worrying about scraper
@@ -15,7 +16,6 @@ class Database {
     while (i < mLength) {
       console.log('inserting program ' + (i+1) + '/' + mLength);
       await programs.create({
-        prog_id: i+1,
         prog_code: this.infoMatrix[4][i],
         prog_name: this.infoMatrix[1][i],
         prog_type: this.infoMatrix[2][i],
@@ -23,7 +23,7 @@ class Database {
         prog_dept: this.infoMatrix[3][i],
         prog_slos: this.infoMatrix[7][i].join(', '),
       });
-      i = i + 1;
+      i++;
     } 
   }
   
@@ -34,15 +34,14 @@ class Database {
       console.log('inserting departments ' + (i+1) + '/' + mLength);
       let existingDept = await departments.findOne({
         where: { dept_name: this.infoMatrix[3][i]}
-      }) 
+      });
       if (await existingDept == null) {
         await departments.create({
-          dept_id: i+1,
           dept_name: this.infoMatrix[3][i],
           dept_chair: this.infoMatrix[6][i],
-        })
+        });
       }
-      i = i + 1;
+      i++;
     }
   }
   

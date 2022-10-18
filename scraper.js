@@ -142,6 +142,38 @@ class Program {
     return programsSlos;
   }
   
+
+  //TODO: refactor, maybe along with the other inprograms, a lot of repeated code
+  GetProgramsCourses = () => {
+    let programsCourses = [];
+    let realStore = []
+    const totalPrograms = this.insideProgramsArray.length;
+    // going through each program
+    for (let i = 0; i < totalPrograms; i++) {
+      this.$ = cheerio.load(this.insideProgramsArray[i]);
+      const programContent = this.$(".content");
+      let currentCoursesStore = [];
+      let allProgramsScoped = this.insideProgramsArray;
+      // once inside program
+      programContent.find(".classLinks").children().each(function (j, elem) {
+        let $$ = cheerio.load(allProgramsScoped[j])
+        currentCoursesStore.push($$(elem).text().trim());
+        console.log($$(elem).text().trim());
+      }) 
+      // format the data so each index is a full course description
+      let numberOfCourses = currentCoursesStore.length / 3;
+      let tempStore = []
+      let ti = 0;
+      for (let i = 0; i < numberOfCourses; i++) {
+        tempStore.push(currentCoursesStore.slice(ti, ti+3).join(' ')) 
+        ti = ti + 3;
+      }
+      currentCoursesStore = tempStore;
+      programsCourses.push(currentCoursesStore)
+    }
+    return programsCourses;
+  }
+  
   // populate infoMatrix class variable with data from all programs page
   SetAllPrograms = () => {
     let links = this.GetProgramLinks();
@@ -161,9 +193,11 @@ class Program {
     let abouts = this.GetProgramsAbouts();
     let chairs = this.GetProgramsChairs();
     let slos = this.GetProgramsSlos();
+    //let courses = this.GetProgramsCourses(); // Not using currently, commented out to save compute
     this.programInfo.push(abouts);
     this.programInfo.push(chairs);
     this.programInfo.push(slos);
+    //this.programInfo.push(courses);
   }
 
   // This is the only method that should be used from the class outside of the class
