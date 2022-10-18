@@ -1,6 +1,7 @@
 import { departments, programs } from './sequelize.js';
 // InfoMatrix Key:
-// [links, names, types, depts, codes, abouts, chairs, [slos]]
+// [links, PROG_NAME, DEG_TYPE, DEP_NAME, PROG_CODE, PROG_DESC, DEP_CHAIR, [PROG_SLO], [COUR_NAME]]
+// TODO: COUR_DESC
 
 // Same thing that was happening before just with a matrix
 // As the models grow or change we can just add methods here without worrying about scraper
