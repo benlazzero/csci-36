@@ -44,16 +44,16 @@ const sequelize = new Sequelize({
 // Makes the tables that will store data from the scrapers
 const departments = departmentModel(sequelize, Sequelize);
 const programs = programModel(sequelize, Sequelize);
-const courses = courseModel(sequelize, Sequelize);
+// const courses = courseModel(sequelize, Sequelize);
 
 const assessments = assessmentModel(sequelize, Sequelize);
 
-const coutcomes = coutcomeModel(sequelize, Sequelize);
-const poutcomes = poutcomeModel(sequelize, Sequelize);
-const ploAssessments = ploAssessmentsModel(sequelize, Sequelize);
-const proCourses = proCourseModel(sequelize, Sequelize);
+// const coutcomes = coutcomeModel(sequelize, Sequelize);
+// const poutcomes = poutcomeModel(sequelize, Sequelize);
+// const ploAssessments = ploAssessmentsModel(sequelize, Sequelize);
+// const proCourses = proCourseModel(sequelize, Sequelize);
 
-buildAssociations(sequelize);
+// buildAssociations(sequelize);
 
 sequelize.sync({alter: true})
 .then(() => {
