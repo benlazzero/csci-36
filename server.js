@@ -18,6 +18,7 @@ const PORT = process.env.PORT || 3000;
 // ejs middleware and setup
 server.use(expressLayouts);
 server.set("view engine", "ejs");
+server.use(express.static('public'));
 
 // Route handlers in middleware, every time there is a request it will pick the right route based on req
 // follow import trail and you can see what they do when they get hit
