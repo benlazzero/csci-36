@@ -1,0 +1,61 @@
+header {
+    padding-bottom: 25px;
+}
+
+.pageTitle {
+    padding-top: 40px;
+}
+
+h1,h2 {
+    font-family: khula, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#logo {
+    object-fit: contain;
+}
+
+#softHead {
+    color: #bfbfbf;
+    padding-top: .75em;
+}
+
+.spaceText {
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+.tightText {
+    margin-top: -15px;
+}
+
+.nav-link {
+    color: #999999;
+    font-family: khula, sans-serif;
+    font-weight: 600;
+    font-style: normal
+}
+
+.customTable {
+    font-family: khula, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+tr:nth-child(even) {
+    background-color: #FEF4E8;
+    
+}
+
+th {
+    background-color: #FEF4E8;
+}
+
+td a {
+    color: slategrey;
+}
+
+.invisble {
+    color: white;
+}
