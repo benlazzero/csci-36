@@ -1,3 +1,17 @@
 <h1 class="text-dark py-2"><b>Department: </b><%= department.dept_name %></h1>
 
 <h3 class="text-dark py-2"><b>Chair: </b> <%= department.dept_chair %></h3>
+
+<p class="text-dark"><b>Associated Programs: </b> 
+    <ul class="text-dark">
+        <% for (let program of programs) { %>
+            <% if (program.prog_dept == department.dept_name) { %>
+                <li>
+		            <a href="/programs/<%=program.prog_id%>">
+			            <%= program.prog_name %>: <%= program.prog_type %>
+		            </a>
+		        </li>
+            <% } %>
+        <% } %>
+    </ul>
+</p>
