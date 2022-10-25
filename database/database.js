@@ -23,10 +23,13 @@ class Database {
         prog_dept: this.infoMatrix[3][i],
       });
       
-      await poutcomes.create({
-        pout_desc: this.infoMatrix[7][i].join(' '),
-        prog_id: i+1,
-      });
+      let ploQuantity = this.infoMatrix[7][i].length;
+      for (let j = 0; j < ploQuantity; j++) {
+        await poutcomes.create({
+          pout_desc: this.infoMatrix[7][i][j],
+          prog_id: i+1,
+        });
+      }
       i++;
     } 
   }
