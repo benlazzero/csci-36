@@ -6,5 +6,13 @@
 
 <p class="text-dark"><b>Program Code: </b><%= program.prog_code %> </p>
 
-<p class="text-dark"><b>Slo's: </b><%= program.prog_slos %> </p>
+<p class="text-dark"><b>Program Learning Outcomes: </b> 
+    <ul class="text-dark">
+        <% for (let plo of poutcomes) { %>
+            <% if (plo.prog_id == program.prog_id) { %>
+                <li><%= plo.pout_desc %></li>
+            <% } %>
+        <% } %>
+    </ul>
+</p>
 
