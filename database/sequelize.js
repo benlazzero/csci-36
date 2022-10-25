@@ -49,7 +49,7 @@ const programs = programModel(sequelize, Sequelize);
 const assessments = assessmentModel(sequelize, Sequelize);
 
 // const coutcomes = coutcomeModel(sequelize, Sequelize);
-// const poutcomes = poutcomeModel(sequelize, Sequelize);
+const poutcomes = poutcomeModel(sequelize, Sequelize);
 // const ploAssessments = ploAssessmentsModel(sequelize, Sequelize);
 // const proCourses = proCourseModel(sequelize, Sequelize);
 
@@ -61,4 +61,4 @@ sequelize.sync({alter: true})
 });
 
 // exports the models for read/write from other modules. 
-export { departments, programs };
+export { departments, programs, poutcomes };

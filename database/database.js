@@ -1,4 +1,4 @@
-import { departments, programs } from './sequelize.js';
+import { departments, programs, poutcomes } from './sequelize.js';
 // InfoMatrix Key:
 // [links, PROG_NAME, DEG_TYPE, DEP_NAME, PROG_CODE, PROG_DESC, DEP_CHAIR, [PROG_SLO], [COUR_NAME]]
 // TODO: COUR_DESC
@@ -21,7 +21,11 @@ class Database {
         prog_type: this.infoMatrix[2][i],
         prog_desc: this.infoMatrix[5][i],
         prog_dept: this.infoMatrix[3][i],
-        prog_slos: this.infoMatrix[7][i].join(', '),
+      });
+      
+      await poutcomes.create({
+        pout_desc: this.infoMatrix[7][i].join(' '),
+        prog_id: i+1,
       });
       i++;
     } 

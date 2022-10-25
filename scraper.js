@@ -22,7 +22,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentLink = this.butteUrl + this.$(this.allProgramsObject[Index]).find('a').attr('href');
       programLinks.push(currentLink);
-      Index = Index + 1;
+      Index++;
     }
     return programLinks;
   }
@@ -33,7 +33,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentName = this.$(this.allProgramsObject[Index]).find('a').first().text().trim();
       programNames.push(currentName);
-      Index = Index + 1;
+      Index++;
     }
     return programNames;
   }
@@ -44,7 +44,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentType = this.$(this.allProgramsObject[Index]).find("td").eq(0).text().trim();
       programTypes.push(currentType);
-      Index = Index + 1;
+      Index++;
     }
     return programTypes;
   }
@@ -55,7 +55,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentDept = this.$(this.allProgramsObject[Index]).find("td").eq(1).text().trim();
       programDepts.push(currentDept);
-      Index = Index + 1;
+      Index++;
     }
     return programDepts;
   }
@@ -66,7 +66,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentCode = this.$(this.allProgramsObject[Index]).find("td").last().text().trim();
       programCodes.push(currentCode);
-      Index = Index + 1;
+      Index++;
     }
     return programCodes;
   }
@@ -192,11 +192,11 @@ class Program {
     let abouts = this.GetProgramsAbouts();
     let chairs = this.GetProgramsChairs();
     let slos = this.GetProgramsSlos();
-    let courses = this.GetProgramsCourses(); // Not using currently, commented out to save compute
+    //let courses = this.GetProgramsCourses(); // Not using currently, commented out to save compute
     this.programInfo.push(abouts);
     this.programInfo.push(chairs);
     this.programInfo.push(slos);
-    this.programInfo.push(courses);
+    //this.programInfo.push(courses);
   }
 
   // This is the only method that should be used from the class outside of the class
