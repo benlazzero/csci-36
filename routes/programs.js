@@ -11,20 +11,17 @@ router.get("/programs", async (req, res) => {
 
 // Single program
 router.get("/programs/:program_id", async (req, res) => {
-    const program = await programs.findOne({
+    const theProgram = await programs.findOne({
         where: {
             prog_id: req.params.program_id
         },
         raw: true
     });
-    if (program == null) {
+    if (theProgram == null) {
         res.status(404).json('ERROR: No program found with that id')
     } else {
-        console.log("Found: " + program.prog_name)
-        res.render("single_program", {
-            program: program,
-            title: `SLO Tracker - ${program.prog_name}`,
-        });
+        console.log("Found: " + theProgram.prog_name)
+        res.render("single_program", { program: theProgram, title: `SLO Tracker - ${theProgram.prog_name}`});
     }
 });
 

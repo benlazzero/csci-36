@@ -2,6 +2,10 @@
 import express from 'express';
 import expressLayouts from 'express-ejs-layouts';
 
+// for absolute path support with the es6 module
+import * as url from 'url';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
 // Bringing in models, modules, and routes
 import { departments, programs } from './database/sequelize.js'; // models from DB for read/write
 import { FetchHtml, Program } from './scraper.js';
@@ -16,9 +20,10 @@ const server = express();
 const PORT = process.env.PORT || 3000;
 
 // ejs middleware and setup
+server.use(express.static(__dirname + '/public'));
 server.use(expressLayouts);
+server.set(('layout', './views/layout'))
 server.set("view engine", "ejs");
-server.use(express.static('public'));
 
 // Route handlers in middleware, every time there is a request it will pick the right route based on req
 // follow import trail and you can see what they do when they get hit
@@ -31,6 +36,7 @@ server.use(formRoute);
 // start nodejs server, It will listen for requests on PORT.
 server.listen(PORT, async () => {
     console.log(`Listening on Port: ${PORT}`);
+    console.log(__dirname)
 
     // to run the scraper or not to run the scraper...
     try {

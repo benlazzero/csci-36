@@ -1,76 +1,83 @@
-<h1 class="py-2 pt-5">
+<%/* 
+FORM Contents
+1. Email address
+2. Dropdown list of all programs
+3. Date entry for assessment
+4. Completed by Date
+5. All present
+6. Discipline Area
+7. PLOs
+8.clos
+9.Discussed strategies
+10. Discussed resources
+11. comments
+*/%>
+
+
+
+<h1 class="">
     Department Learning Outcomes Discussion Summary
 </h1>
-<p class="p-3 mb-2 text-dark">* Required</p>
-<form>
-    <div class="p-3 form-group text-dark">
+<p class="">* Required</p>
+<form class="">
+    <div class="">
         <label for="exampleInputEmail1">Email address *</label>
         <input
             type="email"
-            class="form-control"
+            class=""
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             placeholder="Your email"
         />
-        <small id="emailHelp" class="form-text text-muted"
+        <small id="" class=""
             >This summary will be sent to this email.</small
         >
     </div>
-    <div class="p-3 form-group text-light">
+    <div>
+      <label for="programs">Choose a program:</label>
+      <select name="programs">
+        <% for (let i = 0; i < programs.length; i++) { %>
+           <option value="<%= programs[i] %>"><%= programs[i] %></option>
+       <% } %>
+      </select>
+    </div>
+    <div>
+      <label for="start">Date Assessed</label>
+      <input type="date" value="<%= date %>" />
+    </div>
+    <div class="">
         <label for="disciplineInput">Discipline Area</label>
         <input
             type="text"
-            class="form-control"
+            class=""
             id="disciplineInput"
             placeholder="Your awnser"
         />
     </div>
-    <div class="p-3 form-group text-light">
+    <div class="">
         <label for="completeInput">Completed By</label>
-        <input
-            type="text"
-            class="form-control"
-            id="completeInput"
-            placeholder="Your awnser"
-        />
+        <input type="text" class="" id="completeInput" placeholder="Your awnser" />
     </div>
-    <div class="p-3 form-group text-light">
-        <label for="presentInput"
-            >Who was present for this discussion (list names).</label
-        >
-        <input
-            type="text"
-            class="form-control"
-            id="presentInput"
-            placeholder="Your anwser"
-        />
+    <div class="">
+        <label for="presentInput">Who was present for this discussion (list names).</label>
+        <input type="text" class="" id="presentInput" placeholder="Your anwser" />
     </div>
-    <div class="p-3 form-group text-light">
+    <div class="">
         <h5>Which Outcomes were discussed?</h5>
         <p>
             Your discussion doesn't need to discuss all the outcome levels
             below, but should include at least a few of them.
         </p>
     </div>
-    <div class="p-3 form-group text-light">
+    <div class="">
         <label for="coursesInput">Courses & SLOs Assessed</label>
-        <input
-            type="text"
-            class="form-control"
-            id="coursesInput"
-            placeholder="Your awnser"
-        />
+        <input type="text" class="" id="coursesInput" placeholder="Your awnser" />
     </div>
-    <div class="p-3 form-group text-light">
+    <div class="">
         <label for="programsInput">Programs & PLOs Assessed</label>
-        <input
-            type="text"
-            class="form-control"
-            id="programsInput"
-            placeholder="Your awnser"
-        />
+        <input type="text" class="" id="programsInput" placeholder="Your awnser" />
     </div>
-    <div class="p-3 form-group text-light">
+    <div class="">
         <h5>Looking Back</h5>
         <p>
             Please begin with a look back at summaries submitted in the prior
@@ -78,16 +85,11 @@
             taken, resources requested, resources received, etc.
         </p>
     </div>
-    <div class="p-3 form-group text-light">
+    <div class="">
         <label for="lookingbackInput">Looking Back</label>
-        <input
-            type="text"
-            class="form-control"
-            id="lookingbackInput"
-            placeholder="Your awnser"
-        />
+        <input type="text" class="" id="lookingbackInput" placeholder="Your awnser" />
     </div>
-    <div class="p-3 form-group text-light">
+    <div class="">
         <h5>Part 1 - Findings</h5>
         <p>Discuss the findings and/or observations. Please include:</p>
         <p>

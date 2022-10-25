@@ -192,11 +192,11 @@ class Program {
     let abouts = this.GetProgramsAbouts();
     let chairs = this.GetProgramsChairs();
     let slos = this.GetProgramsSlos();
-    //let courses = this.GetProgramsCourses(); // Not using currently, commented out to save compute
+    let courses = this.GetProgramsCourses(); // Not using currently, commented out to save compute
     this.programInfo.push(abouts);
     this.programInfo.push(chairs);
     this.programInfo.push(slos);
-    //this.programInfo.push(courses);
+    this.programInfo.push(courses);
   }
 
   // This is the only method that should be used from the class outside of the class
