@@ -6,5 +6,18 @@
 
 <p class="text-light"><b>Program Code: </b><%= program.prog_code %> </p>
 
-<p class="text-light"><b>Slo's: </b><%= program.prog_slos %> </p>
+<p class="text-light"><b>Program Learning Outcomes: </b>
+    <ul class="text-light">
+        <% let text = program.prog_slos %>
+        <% let slo_array = text.split("., ") %>
+        <% let total_slos = slo_array.length %>
+        <% for (let slo in slo_array) { %>
+            <li>
+                <%/* Periods are removed as part of the delimiter. The "if" 
+                statement replaces periods for all but the last SLO. */%>
+                <%=slo_array[slo]%><% if (slo < total_slos - 1) { %>.<% } %>
+            </li>
+        <% } %>
+    </ul>
+</p>
 
