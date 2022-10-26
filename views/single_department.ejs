@@ -7,10 +7,10 @@
         <% for (let program of programs) { %>
             <% if (program.prog_dept == department.dept_name) { %>
                 <li>
-		            <a href="/programs/<%=program.prog_id%>">
-			            <%= program.prog_name %>: <%= program.prog_type %>
-		            </a>
-		        </li>
+                    <a href="/programs/<%=program.prog_id%>">
+                        <%= program.prog_name %>: <%= program.prog_type %>
+                    </a>
+                </li>
             <% } %>
         <% } %>
     </ul>
