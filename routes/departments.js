@@ -1,5 +1,6 @@
 import express from 'express';
 import { departments } from '../database/sequelize.js';
+import { programs } from '../database/sequelize.js';
 
 const router = express.Router();
 
@@ -17,6 +18,7 @@ router.get("/departments/:dept_id", async (req, res) => {
         },
         raw: true
     });
+    const allPrograms =  await programs.findAll({order: ['prog_name'], raw: true});
     if (department == null) {
         res.status(404).json('ERROR: No department found with that id')
     } else {
@@ -24,6 +26,7 @@ router.get("/departments/:dept_id", async (req, res) => {
         res.render("single_department", {
             department: department,
             title: `SLO Tracker - ${department.dept_name}`,
+            programs: allPrograms
         });
     }
 });
