@@ -3,10 +3,12 @@ import Sequelize from 'sequelize';
 // Tables used for filling out website tables
 import { departmentModel } from '../models/departments.js';
 import { programModel } from '../models/programs.js';
+import associations from '../models/associates2.js';
 
 // Table used for storing form information
 import { assessmentModel } from '../models/assessments.js';
 import { courseModel } from '../models/courses.js';
+import courprogModel from '../models/courprog.js';
 import { coutcomeModel } from '../models/coutcomes.js';
 import { poutcomeModel } from '../models/poutcomes.js';
 
@@ -44,21 +46,22 @@ const sequelize = new Sequelize({
 // Makes the tables that will store data from the scrapers
 const departments = departmentModel(sequelize, Sequelize);
 const programs = programModel(sequelize, Sequelize);
-// const courses = courseModel(sequelize, Sequelize);
-
+const courses = courseModel(sequelize, Sequelize);
 const assessments = assessmentModel(sequelize, Sequelize);
+const courprog = courprogModel(sequelize, Sequelize);
+const poutcomes = poutcomeModel(sequelize, Sequelize);
 
 // const coutcomes = coutcomeModel(sequelize, Sequelize);
-const poutcomes = poutcomeModel(sequelize, Sequelize);
 // const ploAssessments = ploAssessmentsModel(sequelize, Sequelize);
 // const proCourses = proCourseModel(sequelize, Sequelize);
 
 // buildAssociations(sequelize);
 
+associations();
 sequelize.sync({alter: true})
 .then(() => {
     console.log('Database & Tables Created Successfully!');
 });
 
 // exports the models for read/write from other modules. 
-export { departments, programs, poutcomes };
+export { departments, programs, poutcomes, courses, assessments, courprog };

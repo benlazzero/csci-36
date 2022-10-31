@@ -59,3 +59,16 @@ td a {
 .invisble {
     color: white;
 }
+
+#form-header-text {
+  font-size: .8rem;
+}
+
+#radio-lister {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+textarea {
+  height: 150px !important;
+}

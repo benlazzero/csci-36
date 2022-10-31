@@ -22,7 +22,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentLink = this.butteUrl + this.$(this.allProgramsObject[Index]).find('a').attr('href');
       programLinks.push(currentLink);
-      Index++;
+      Index = Index + 1;
     }
     return programLinks;
   }
@@ -33,7 +33,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentName = this.$(this.allProgramsObject[Index]).find('a').first().text().trim();
       programNames.push(currentName);
-      Index++;
+      Index = Index + 1;
     }
     return programNames;
   }
@@ -44,7 +44,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentType = this.$(this.allProgramsObject[Index]).find("td").eq(0).text().trim();
       programTypes.push(currentType);
-      Index++;
+      Index = Index + 1;
     }
     return programTypes;
   }
@@ -55,7 +55,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentDept = this.$(this.allProgramsObject[Index]).find("td").eq(1).text().trim();
       programDepts.push(currentDept);
-      Index++;
+      Index = Index + 1;
     }
     return programDepts;
   }
@@ -66,7 +66,7 @@ class Program {
     while(Index < this.totalPrograms) {
       let currentCode = this.$(this.allProgramsObject[Index]).find("td").last().text().trim();
       programCodes.push(currentCode);
-      Index++;
+      Index = Index + 1;
     }
     return programCodes;
   }
@@ -144,12 +144,13 @@ class Program {
   
 
   //TODO: refactor, maybe along with the other inprograms, a lot of repeated code
+  // BUG: not critical, some of the course descriptions are getting cut short, probably the and/or parsing
   GetProgramsCourses = () => {
     let programsCourses = [];
-    let realStore = []
     const totalPrograms = this.insideProgramsArray.length;
     // going through each program
     for (let i = 0; i < totalPrograms; i++) {
+      console.log('course' + (i+1) + '/' + totalPrograms)
       this.$ = cheerio.load(this.insideProgramsArray[i]);
       const programContent = this.$(".content");
       let currentCoursesStore = [];
@@ -157,7 +158,13 @@ class Program {
       // once inside program
       programContent.find(".classLinks").children().each(function (j, elem) {
         let $$ = cheerio.load(allProgramsScoped[j])
-        currentCoursesStore.push($$(elem).text().trim());
+        let currentElem = $$(elem).text().trim() + ',';
+        if (currentElem.search('or ') !== -1) {
+          currentElem = currentElem.slice(3);
+        } else if (currentElem.search('and ') !== -1) {
+          currentElem = currentElem.slice(4);
+        }
+        currentCoursesStore.push(currentElem);
       }) 
       // format the data so each index is a full course description
       let numberOfCourses = currentCoursesStore.length / 3;
@@ -192,11 +199,11 @@ class Program {
     let abouts = this.GetProgramsAbouts();
     let chairs = this.GetProgramsChairs();
     let slos = this.GetProgramsSlos();
-    //let courses = this.GetProgramsCourses(); // Not using currently, commented out to save compute
+    let courses = this.GetProgramsCourses(); // Not using currently, commented out to save compute
     this.programInfo.push(abouts);
     this.programInfo.push(chairs);
     this.programInfo.push(slos);
-    //this.programInfo.push(courses);
+    this.programInfo.push(courses);
   }
 
   // This is the only method that should be used from the class outside of the class
