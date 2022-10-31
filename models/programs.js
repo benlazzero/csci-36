@@ -29,6 +29,9 @@ const programModel = (sequelize, dataTypes) => {
         prog_dept: {
             type: dataTypes.TEXT
         },
+        prog_slos: {
+            type: dataTypes.TEXT
+      }
     });
     
     return programs;

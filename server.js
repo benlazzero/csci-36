@@ -1,6 +1,7 @@
 // Bringing in librarys
 import express from 'express';
 import expressLayouts from 'express-ejs-layouts';
+import bodyParser from 'body-parser';
 
 // for absolute path support with the es6 module
 import * as url from 'url';
@@ -19,6 +20,11 @@ import formRoute from './routes/form.js';
 const server = express();
 const PORT = process.env.PORT || 3000;
 
+// parse application/x-www-form-urlencoded
+// parse application/json
+server.use(bodyParser.urlencoded({ extended: false }))
+server.use(bodyParser.json())
+
 // ejs middleware and setup
 server.use(express.static(__dirname + '/public'));
 server.use(expressLayouts);
@@ -36,14 +42,12 @@ server.use(formRoute);
 // start nodejs server, It will listen for requests on PORT.
 server.listen(PORT, async () => {
     console.log(`Listening on Port: ${PORT}`);
-    console.log(__dirname)
 
     // to run the scraper or not to run the scraper...
     try {
       const progDB = await programs.findAndCountAll();
       const deptDB = await departments.findAndCountAll();
     } catch(error) {
-        // side effects like crazy because this is a web scraper...
         // awaits are simply stating 'we need this request to come back before proceding'
         
         // Get html from year to scrape
