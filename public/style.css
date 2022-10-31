@@ -37,6 +37,10 @@ h1,h2 {
     font-style: normal
 }
 
+.nav-link:hover {
+    color: #000000;
+}
+
 .customTable {
     font-family: khula, sans-serif;
     font-style: normal;
@@ -53,7 +57,25 @@ th {
 }
 
 td a {
-    color: slategrey;
+    color: #777777;
+}
+
+ul a {
+    color: #777777;
+    text-decoration: none;
+}
+
+ul a:hover {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 1em;
+    list-style-type: square;
+}
+
+a:hover {
+    color: #000000;
 }
 
 .invisble {
