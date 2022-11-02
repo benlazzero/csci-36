@@ -4,24 +4,21 @@
         <%- include ('includes/head') -%>
     </head>
     <body>
-        <header class="container-fluid bg-light">
-            <div class="d-flex flex-row" id="branding">
-                <img src="/images/grad-hat.png" alt="graduation hat" class="px-4 py-3" id="logo">
-                <div class="pl-3" id="page title">
+        <header class="container-fluid bg-light p-0">
+            <div class="d-flex flex-row px-2" id="branding">
+                <img src="/images/grad-hat.png" alt="graduation hat" class="px-0 py-1 py-md-4 col-2" id="logo">
+                <div class="pl-2 pr-2 py-1 py-md-4 col-9 align-self-center" id="page title">
                     <h1 id="softHead">Butte College</h1>
                     <h2 class="tightText">SLO <span class="spaceText">Tracker</span></h2>
                 </div>
-                    <div>
-                        <img src="/images/brand-banner.png" class="px-5 py-4">
-                    </div>    
             </div>
         </header>
-        <div class="container-fluid bg-light min-vh-100 p-0 d-block">
+        <div class="container-fluid bg-light min-vh-100 px-2 d-block">
                 <div class="row">
                     <div class="col-2 pt-3">
                         <%- include ('includes/navbar') -%>
                     </div>
-                    <div class="col-8 bg-white">
+                    <div class="col-10 bg-white pb-5">
                         <%- body %>
                     </div>
                 </div>
