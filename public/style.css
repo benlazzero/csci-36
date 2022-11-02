@@ -1,5 +1,10 @@
 header {
     padding-bottom: 25px;
+    background-image: url(/images/brand-banner.png);
+}
+
+#branding {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .pageTitle {
@@ -14,11 +19,13 @@ h1,h2 {
 
 #logo {
     object-fit: contain;
+    max-height: 150px;
+    min-width: 72px;
 }
 
 #softHead {
     color: #bfbfbf;
-    padding-top: .75em;
+    padding-top: .25em;
 }
 
 .spaceText {
@@ -27,6 +34,7 @@ h1,h2 {
 }
 
 .tightText {
+    color: #EEEEEE;
     margin-top: -15px;
 }
 
@@ -49,11 +57,11 @@ h1,h2 {
 
 tr:nth-child(even) {
     background-color: #FEF4E8;
-    
 }
 
-th {
-    background-color: #FEF4E8;
+thead {
+    color: #EEEEEE;
+    background-color: #191919;
 }
 
 td a {
