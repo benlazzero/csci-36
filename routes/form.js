@@ -62,7 +62,7 @@ router.post("/dis-form", async (req, res) => {
     notes: assessObject.notes,
   }).then(() => {
     res.writeHead(302, {
-      'Location': '/'
+      'Location': '/dis-form'
     });
     res.end();
   }).catch((error) => {
