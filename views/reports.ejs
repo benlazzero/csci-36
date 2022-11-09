@@ -1,0 +1,27 @@
+<h1 class="py-2 pt-5">Reports</h1>
+<table class="table customTable">
+    <thead>
+        <th>ID</th>
+        <th>Completed By</th>
+        <th>email</th>
+        <th>Date assesed</th>
+        <th>Assesed Course</th>
+        <th>Program</th>
+        <th>PLOs</th>
+        <th>CLOs</th>
+    </thead>
+    <tbody>
+        <% for (let assessment of assessments) { %>
+        <tr>
+            <td><%=assessment.discussion_id%></td>
+            <td><%=assessment.discussion_completed_by%></td>
+            <td><%=assessment.email%></td>
+            <td><%=assessment.date_assessed%></td>
+            <td><%=assessment.assesed_course %></td>
+            <td><%=assessment.assessed_program%></td>
+            <td><%=assessment.assessed_plos%></td>
+            <td><%=assessment.assessed_clos%></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
