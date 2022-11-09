@@ -15,6 +15,7 @@ import indexRoute from './routes/index.js';
 import departmentRoute from './routes/departments.js';
 import programRoute from './routes/programs.js';
 import formRoute from './routes/form.js';
+import reportsRoute from './routes/reports.js';
 
 // bind express class to 'server' and define port (process.env.PORT is for non-local deployment)
 const server = express();
@@ -38,7 +39,7 @@ server.use(indexRoute);
 server.use(departmentRoute);
 server.use(programRoute);
 server.use(formRoute);
-
+server.use(reportsRoute);
 // start nodejs server, It will listen for requests on PORT.
 server.listen(PORT, async () => {
     console.log(`Listening on Port: ${PORT}`);
