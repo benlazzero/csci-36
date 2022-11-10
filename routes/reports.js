@@ -13,7 +13,7 @@ router.get("/reports", async (req, res) => {
 router.get("/reports/:discussion_id", async (req, res) => {
     const theAssessment = await assessments.findOne({
         where: {
-            prog_id: req.params.program_id
+            disscussion_id: req.params.discussion_id
         },
         raw: true
     });
