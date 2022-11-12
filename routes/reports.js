@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/reports", async (req, res) => {
   const allAssessments =  await assessments.findAll({order: ['discussion_id'],raw: true});
-    res.render("reports", { title: "Submitted Reports",
+    res.render("reports", { title: "SLO Tracker - Reports",
      assessments:allAssessments });
 });
 
@@ -24,7 +24,7 @@ router.get("/reports/:discussion_id", async (req, res) => {
         console.log("Found: " + theAssessment.discussion_id)
         res.render("single_reports", { 
             assessment: theAssessment, 
-            title: `Report - ${theAssessment.assessed_program}`
+            title: `SLO Tracker - ${theAssessment.assessed_program} Report`
         });
     }
 });
