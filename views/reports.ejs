@@ -9,11 +9,11 @@
         <% for (let assessment of assessments) { %>
         <tr>
             <td>
-                <a href="/report/<%=assessment.discussion_id%>">
+                <a href="/reports/<%=assessment.discussion_id%>">
                     <%=assessment.assessed_program%>
                 </a>
             </td>
-            <td><%=assessment.assessed_course%></td>
+            <td><%=assessment.assesed_course %></td>
             <td><%=assessment.date_assessed%></td>
         </tr>
         <% } %>

@@ -1,25 +1,29 @@
-<h1 class="text-dark py-2 pt-5"><%= assessment.assessed_program %></h1>
+<h1 class="text-dark pt-5"><%= assessment.assessed_program %></h1>
 
-<h1 class="text-dark py-2 pt-5"><%= assessment.assessed_course %></h1>
+<h2 class="text-dark pb-5"><%= assessment.assesed_course %></h2>
 
-<h2 class="text-dark">Program Learning Outcome</h2>
+<h3 class="text-dark">Program Learning Outcome</h3>
 
-<p class="text-dark"><%= assessment.assessed_plo %> </p>
+<p class="text-dark pb-5"><%= assessment.assessed_plos %> </p>
 
-<h2 class="text-dark">Course Learning Outcome</h2>
+<h3 class="text-dark">Course Learning Outcome</h3>
 
-<p class="text-dark"><%= assessment.assessed_clo %> </p>
+<p class="text-dark pb-5"><%= assessment.assessed_clos %> </p>
 
-<h2 class="text-dark">Strategies</h2>
+<h3 class="text-dark">Strategies</h3>
 
-<p class="text-dark"><%= assessment.assesed_strategies %> </p>
+<p class="text-dark pb-5"><%= assessment.assesed_strats %> </p>
 
-<h2 class="text-dark">Resources</h2>
+<h3 class="text-dark">Resources</h3>
 
-<p class="text-dark"><%= assessment.assesed_resources %> </p>
+<p class="text-dark pb-5"><%= assessment.assesed_resources %> </p>
 
-<h2 class="text-dark">Notes</h2>
+<h3 class="text-dark">Notes</h3>
 
-<p class="text-dark"><%= assessment.notes %> </p>
+<p class="text-dark pb-5"><%= assessment.notes %> </p>
 
 <p class="text-dark"><b>Submitted by: </b><%= assessment.discussion_completed_by %> </p>
+
+<p class="text-dark"><b>Additional Contributers: </b><%= assessment.discussion_also_present %> </p>
+
+<p class="text-dark"><b>Submitted on: </b><%= assessment.date_assessed %> </p>
