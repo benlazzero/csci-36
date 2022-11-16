@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
         <%- include ('includes/head') -%>
     </head>
+    
     <body>
-        
+        <!--HEADER AND BRANDING TOP OF PAGE-->
         <header class="container-fluid bg-light p-0">
             <div class="d-flex flex-row px-2" id="branding">
                 <img src="/images/grad-hat.png" alt="graduation hat" class="px-0 py-1 py-md-4 col-2" id="logo">
@@ -15,12 +17,17 @@
             </div>
         </header>
         
+        <!--NAVBAR-->
         <%- include ('includes/navbar') -%>
         
+        
+        <!--MAIN SECTION - EACH PAGE CONTENT GETS RENDERED HERE-->
         <main class="container">
             <%- body %>
         </main>
         
+        <!--BOOTSTRAP SCRIPTS-->
+        <%- include ('includes/scripts') -%>
     </body>
+    
 </html>
-<%- include ('includes/scripts') -%>
