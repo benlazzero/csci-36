@@ -1,0 +1,21 @@
+<h1 class="py-2 pt-5">Reports</h1>
+<table class="table customTable">
+    <thead>
+        <th>Programs</th>
+        <th>Course</th>
+        <th>Date assesed</th>
+    </thead>
+    <tbody>
+        <% for (let assessment of assessments) { %>
+        <tr>
+            <td>
+                <a href="/reports/<%=assessment.discussion_id%>">
+                    <%=assessment.assessed_program%>
+                </a>
+            </td>
+            <td><%=assessment.assesed_course %></td>
+            <td><%=assessment.date_assessed.toDateString()%></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
