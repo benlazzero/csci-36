@@ -26,69 +26,40 @@
         let keyCour = '<%=courkey%>'.split(',')
         let fCourses = '<%=courses%>'.split(',')
         let fSlos = '<%- slos %>'.split('+') 
-        let renderArr = []
-        let elArr = []
 
         // get slos parsed and ready
-        let renderSlos = []
-        for (let i = 0; i < fSlos.length-1; i++) {
-          let temp = fSlos[i].split('.') 
-          if (temp[0].charAt(0) == ',') {
-            temp[0] = temp[0].slice(1)
-          }
-          temp = temp.filter((elem) => {
-            return elem != ''
-          })
-          renderSlos.push(temp)
-        }
+        let renderSlos = parseSlos(fSlos)
+        let renderArr = getCoursesForValue(value, fCourses, keyCour)
+        let elArr = makeCourseOptions(renderArr)
 
         // show header for selection
         document.querySelector('.alert.alert-info').style.display = 'block'
         document.querySelector('.bg-light.radio-select').style.display = 'block'
+
         // slos for current value
         let currentSlos = renderSlos[value-1]
         let progLosArr = makeSloCheckboxes(currentSlos)
-        let progLosElement = document.querySelector('.plo-options-wrapper')
-        progLosElement.style.display = 'block'
-        while (progLosElement.firstChild) {
-          progLosElement.removeChild(progLosElement.firstChild)
-        }
-        let progHeader = document.createElement('h5')
-        progHeader.innerHTML = 'Program Learning Outcomes'
-        progHeader.classList.add('mb-4')
-        progHeader.classList.add('mt-4')
-        progLosElement.appendChild(progHeader)
+        
+        // clean up and set program nodes
+        let progLosElement = removeCloSelections()
+        
+        // clean up clos because program has changed
+        cleanOldClos()
+
+        // create header and show program learning outcomes
+        progLosElement.appendChild(makeProgHeader())
+
         for (let i = 0; i < progLosArr.length; i++) {
           progLosArr[i].firstChild.setAttribute('name', 'programopt')
           progLosArr[i].firstChild.onclick = showTextArea
           progLosElement.appendChild(progLosArr[i])
         }
         
-        // getting all courses
-        for (let i = 0; i < length; i++) {
-          if (keyCour[i] === value) {
-            renderArr.push(fCourses[i])
-          }  
-        }
-        // creating options for courses
-        for (let i = 0; i < renderArr.length; i++) {
-          let newOption = document.createElement('option')
-          newOption.innerHTML = renderArr[i]
-          elArr.push(newOption)
-        }
         // remove placeholder
-        let parent = document.getElementById('progs-courses')
-        let label = document.querySelector('.text-secondary.coursehide')
-        parent.style.display = 'block'
-        label.style.display = 'unset'
-        while (parent.firstChild) {
-          parent.removeChild(parent.firstChild)
-        }
-        let chooseOption = document.createElement('option')
-        chooseOption.value = ''
-        chooseOption.setAttribute('selected', '')
-        chooseOption.innerHTML = 'Choose...'
-        parent.appendChild(chooseOption)
+        let parent = removeProgNodes()
+
+        // add choose option
+        parent.appendChild(makeChooseOpt())
 
         // append options to course select box
         for (let i = 0; i < elArr.length; i++) {
@@ -104,37 +75,21 @@
     <label class="text-secondary coursehide" for="courses" id="form-header-text" style="display:none">COURSE</label>
     <select class="form-select mb-3" id="progs-courses" style="display:none" name="course" onchange="((event) => {
       let value = event.target.value
-      let fClos = `<%- clos %>`
-      fClos = fClos.split('+')
-      
-      for (let i = 0; i < fClos.length; i++) {
-        if (fClos[i].search(value) !== -1) {
-          console.log(fClos[i])
-          fClos = fClos[i]
-        }
-      }
+      let allClos = `<%- clos %>`
 
-      fClos = fClos.slice(fClos.indexOf(',') + 1);
-      fClos = fClos.split('.')
-      fClos.pop()
-      let cloElemsArr = makeSloCheckboxes(fClos)
-      let courseLosElement = document.querySelector('.clo-options-wrapper')
-      courseLosElement.style.display = 'unset'
+      allClos = getCloArr(allClos, value)
 
-      while (courseLosElement.firstChild) {
-        courseLosElement.removeChild(courseLosElement.firstChild)
-      }
-      let courseHeader = document.createElement('h5')
-      courseHeader.innerHTML = 'Course Learning Outcomes'
-      courseHeader.classList.add('mb-4')
-      courseHeader.classList.add('mt-4')
+      // clean and return current clo elements if any
+      let courseLosElement = cleanOldClos()
+
+      let courseHeader = makeCloHeader()
       courseLosElement.appendChild(courseHeader)
-      for (let i = 0; i < cloElemsArr.length; i++) {
-        cloElemsArr[i].firstChild.setAttribute('name', 'courseopt')
-        cloElemsArr[i].firstChild.onclick = showTextArea
-        courseLosElement.appendChild(cloElemsArr[i])
-      }
-      console.log(fClos)
+
+      let cloElemsArr = makeSloCheckboxes(allClos)
+      let showClosArr = addOptionsForClo(cloElemsArr)
+      showClosArr.forEach(cloOption => {
+        courseLosElement.appendChild(cloOption) 
+      });
 
     })(event)">
     </select>
@@ -172,7 +127,7 @@
           <p>
               What resources (if any) are needed to make the changes outlined
               above? What resources (if any) does the department need to help
-              students meet course and/or program outcomes.
+              students meet course and/or program outcomes?
           </p>
       </div>
       <div class="form-group">

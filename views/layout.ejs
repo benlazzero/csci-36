@@ -13,16 +13,13 @@
                 </div>
             </div>
         </header>
-        <div class="container-fluid bg-light min-vh-100 px-2 d-block">
-                <div class="row">
-                    <div class="col-2 pt-3">
-                        <%- include ('includes/navbar') -%>
-                    </div>
-                    <div class="col-10 bg-white pb-5">
-                        <%- body %>
-                    </div>
-                </div>
-        </div>
+        
+        <%- include ('includes/navbar') -%>
+        
+        <main class="container">
+            <%- body %>
+        </main>
+        
     </body>
 </html>
 <%- include ('includes/scripts') -%>
