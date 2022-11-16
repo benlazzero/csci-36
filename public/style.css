@@ -41,12 +41,12 @@ h1,h2 {
 .nav-link {
     color: LightSlateGrey;
     font-family: khula, sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal
 }
 
 .nav-link:hover {
-    color: #000000;
+    color: #eab676;
 }
 
 .navbg {
