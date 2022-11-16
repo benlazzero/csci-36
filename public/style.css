@@ -24,7 +24,7 @@ h1,h2 {
 }
 
 #softHead {
-    color: #bfbfbf;
+    color: LightGrey;
     padding-top: .25em;
 }
 
@@ -39,7 +39,7 @@ h1,h2 {
 }
 
 .nav-link {
-    color: #999999;
+    color: LightSlateGrey;
     font-family: khula, sans-serif;
     font-weight: 600;
     font-style: normal
@@ -49,6 +49,10 @@ h1,h2 {
     color: #000000;
 }
 
+.navbg {
+    background-color: OldLace;
+}
+
 .customTable {
     font-family: khula, sans-serif;
     font-style: normal;
@@ -56,7 +60,7 @@ h1,h2 {
 }
 
 tr:nth-child(even) {
-    background-color: #FEF4E8;
+    background-color: OldLace;
 }
 
 thead {
