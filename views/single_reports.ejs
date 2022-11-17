@@ -22,8 +22,13 @@
 
 <p class="text-dark pb-5"><%= assessment.notes %> </p>
 
-<p class="text-dark"><b>Submitted by: </b><%= assessment.discussion_completed_by %> </p>
+<!-- DATE DISPLAYED AS YYYY-MM-DD -->
+<p class="text-dark"><b>Submission Date: </b>
+    <%= assessment.date_assessed.getFullYear() %>-<!--
+    --><%= assessment.date_assessed.getMonth() %>-<!--
+    --><%= assessment.date_assessed.getDate() %>
+</p>
+
+<p class="text-dark"><b>Submitted By: </b><%= assessment.discussion_completed_by %> </p>
 
 <p class="text-dark"><b>Additional Contributers: </b><%= assessment.discussion_also_present %> </p>
-
-<p class="text-dark"><b>Submitted on: </b><%= assessment.date_assessed %> </p>
