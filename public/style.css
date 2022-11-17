@@ -1,3 +1,53 @@
+/* GENERAL STYLES *************************************************************/
+
+h1,h2 {
+    font-family: khula, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.customTable {
+    font-family: khula, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+tr:nth-child(even) {
+    background-color: OldLace;
+}
+
+thead {
+    color: #EEEEEE;
+    background-color: #191919;
+}
+
+td a {
+    color: LightSlateGrey;
+}
+
+ul a {
+    color: LightSlateGrey;
+    text-decoration: none;
+}
+
+ul a:hover {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 1em;
+    list-style-type: square;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/* LAYOUT.EJS STYLES **********************************************************/
+
 header {
     padding-bottom: 25px;
     background-image: url(/images/brand-banner.png);
@@ -5,16 +55,6 @@ header {
 
 #branding {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.pageTitle {
-    padding-top: 40px;
-}
-
-h1,h2 {
-    font-family: khula, sans-serif;
-    font-style: normal;
-    font-weight: 400;
 }
 
 #logo {
@@ -53,42 +93,9 @@ h1,h2 {
     background-color: OldLace;
 }
 
-.customTable {
-    font-family: khula, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
 
-tr:nth-child(even) {
-    background-color: OldLace;
-}
 
-thead {
-    color: #EEEEEE;
-    background-color: #191919;
-}
-
-td a {
-    color: #777777;
-}
-
-ul a {
-    color: #777777;
-    text-decoration: none;
-}
-
-ul a:hover {
-    text-decoration: none;
-}
-
-ul {
-    padding-left: 1em;
-    list-style-type: square;
-}
-
-a:hover {
-    color: #000000;
-}
+/* REPORT FORM STYLES *********************************************************/
 
 .invisble {
     color: white;
@@ -105,4 +112,43 @@ a:hover {
 
 textarea {
   height: 150px !important;
+}
+
+
+
+/* LEARNING_OUTCOMES.EJS STYLES ***********************************************/
+
+.high_priority {
+    color: white;
+    background-color: black;
+}
+
+.high_priority:hover {
+    background-color: #222222;
+}
+
+.high tr:nth-child(even) {
+    background-color: #DDDDDD;
+}
+
+.med_priority {
+    color: white;
+    background-color: #A80E2C;
+}
+
+.med_priority:hover {
+    background-color: #BC2D47;
+}
+
+.med tr:nth-child(even) {
+    background-color: #FCCCD5;
+}
+
+.low_priority {
+    color: black;
+    background-color: #F48F17;
+}
+
+.low_priority:hover {
+    background-color: #FFA43D;
 }
