@@ -2,10 +2,13 @@
 
 
 <!-- PLOs that are overdue for an update -->
-<h3>
-    <button type="button" class="collapse-button">High Priority PLOs</button>
+<h3 class="high_priority">
+    <!-- Table is collapsible; click here to toggle -->
+    <button type="button" data-toggle="collapse" data-target="#plo-table-1">
+        High Priority PLOs
+    </button>
 </h3>
-<table class="table table-striped table-dark collapse-content">
+<table id="plo-table-1" class="table table-striped table-dark high collapse">
     <thead>
         <th>Outcome ID</th>
         <th>Program</th>
@@ -13,8 +16,12 @@
         <th>Update By</th>
     </thead>
     <tbody>
+        <!-- row_counter lets me assign a unique id to each row -->
+        <!-- Necessary for the collapsible descriptions -->
+        <% let row_counter = 0 %>
         <% for (let outcome of PLOs_1) { %>
-        <tr><button type="button" class="collapse-button">
+        <!-- Outcome description is collapsible; click anywhere on the row to toggle -->
+        <tr><button type="button" data-toggle="collapse" data-target="#pt1-desc-<% row_counter %>">
             <td><%=outcome.outcome_id%></td>
             <td>
                 <a href="/programs/<%=outcome.domain_id%>">
@@ -25,19 +32,22 @@
             <td><%=outcome.next_update%></td>
         </button></tr>
         <!-- Collapsible description spans entire row -->
-        <tr class="collapse-content">
+        <tr id="pt1-desc-<% row_counter %>" class="collapse">
             <td colspan="0"><%=outcome.outcome_description%></td>
         </tr>
+        <% row_counter += 1 %>
         <% } %>
     </tbody>
 </table>
 
 
 <!-- CLOs that are overdue for an update -->
-<h3 class="mt-2">
-    <button type="button" class="collapse-button">High Priority CLOs</button>
+<h3 class="mt-2 high_priority">
+    <button type="button" data-toggle="collapse" data-target="#clo-table-1">
+        High Priority CLOs
+    </button>
 </h3>
-<table class="table table-striped table-dark collapse-content">
+<table id="clo-table-1" class="table table-striped table-dark high collapse">
     <thead>
         <th>Outcome ID</th>
         <th>Course</th>
@@ -45,27 +55,31 @@
         <th>Update By</th>
     </thead>
     <tbody>
+        <% let row_counter = 0 %>
         <% for (let outcome of CLOs_1) { %>
-        <tr><button type="button" class="collapse-button">
+        <tr><button type="button" data-toggle="collapse" data-target="#ct1-desc-<% row_counter %>">
             <td><%=outcome.outcome_id%></td>
             <td><%=outcome.domain_name%></td>
             <td><%=outcome.last_updated%></td>
             <td><%=outcome.next_update%></td>
         </button></tr>
         <!-- Collapsible description spans entire row -->
-        <tr class="collapse-content">
+        <tr id="ct1-desc-<% row_counter %>" class="collapse">
             <td colspan="0"><%=outcome.outcome_description%></td>
         </tr>
+        <% row_counter += 1 %>
         <% } %>
     </tbody>
 </table>
 
 
 <!-- PLOs that should be updated within the year -->
-<h3 class="mt-2">
-    <button type="button" class="collapse-button">Medium Priority PLOs</button>
+<h3 class="mt-2 med_priority">
+    <button type="button" data-toggle="collapse" data-target="#plo-table-2">
+        Medium Priority PLOs
+    </button>
 </h3>
-<table class="table table-striped table-dark collapse-content">
+<table id="plo-table-2" class="table table-striped table-dark med collapse">
     <thead>
         <th>Outcome ID</th>
         <th>Program</th>
@@ -73,8 +87,9 @@
         <th>Update By</th>
     </thead>
     <tbody>
+        <% let row_counter = 0 %>
         <% for (let outcome of PLOs_2) { %>
-        <tr><button type="button" class="collapse-button">
+        <tr><button type="button" data-toggle="collapse" data-target="#pt2-desc-<% row_counter %>">
             <td><%=outcome.outcome_id%></td>
             <td>
                 <a href="/programs/<%=outcome.domain_id%>">
@@ -85,19 +100,22 @@
             <td><%=outcome.next_update%></td>
         </button></tr>
         <!-- Collapsible description spans entire row -->
-        <tr class="collapse-content">
+        <tr id="pt2-desc-<% row_counter %>" class="collapse">
             <td colspan="0"><%=outcome.outcome_description%></td>
         </tr>
+        <% row_counter += 1 %>
         <% } %>
     </tbody>
 </table>
 
 
 <!-- CLOs that should be updated within the year -->
-<h3 class="mt-2">
-    <button type="button" class="collapse-button">Medium Priority CLOs</button>
+<h3 class="mt-2 med_priority">
+    <button type="button" data-toggle="collapse" data-target="#clo-table-2">
+        Medium Priority CLOs
+    </button>
 </h3>
-<table class="table table-striped table-dark collapse-content">
+<table id="clo-table-2" class="table table-striped table-dark med collapse">
     <thead>
         <th>Outcome ID</th>
         <th>Course</th>
@@ -105,27 +123,31 @@
         <th>Update By</th>
     </thead>
     <tbody>
+        <% let row_counter = 0 %>
         <% for (let outcome of CLOs_2) { %>
-        <tr><button type="button" class="collapse-button">
+        <tr><button type="button" data-toggle="collapse" data-target="#ct2-desc-<% row_counter %>">
             <td><%=outcome.outcome_id%></td>
             <td><%=outcome.domain_name%></td>
             <td><%=outcome.last_updated%></td>
             <td><%=outcome.next_update%></td>
         </button></tr>
         <!-- Collapsible description spans entire row -->
-        <tr class="collapse-content">
+        <tr id="ct2-desc-<% row_counter %>" class="collapse">
             <td colspan="0"><%=outcome.outcome_description%></td>
         </tr>
+        <% row_counter += 1 %>
         <% } %>
     </tbody>
 </table>
 
 
 <!-- PLOs that have more than a year until they need to be updated -->
-<h3 class="mt-2">
-    <button type="button" class="collapse-button">Low Priority PLOs</button>
+<h3 class="mt-2 low_priority">
+    <button type="button" data-toggle="collapse" data-target="#plo-table-3">
+        Low Priority PLOs
+    </button>
 </h3>
-<table class="table table-striped table-dark collapse-content">
+<table id="plo-table-3" class="table table-striped table-dark collapse">
     <thead>
         <th>Outcome ID</th>
         <th>Program</th>
@@ -133,8 +155,9 @@
         <th>Update By</th>
     </thead>
     <tbody>
+        <% let row_counter = 0 %>
         <% for (let outcome of PLOs_3) { %>
-        <tr><button type="button" class="collapse-button">
+        <tr><button type="button" data-toggle="collapse" data-target="#pt3-desc-<% row_counter %>">
             <td><%=outcome.outcome_id%></td>
             <td>
                 <a href="/programs/<%=outcome.domain_id%>">
@@ -145,19 +168,22 @@
             <td><%=outcome.next_update%></td>
         </button></tr>
         <!-- Collapsible description spans entire row -->
-        <tr class="collapse-content">
+        <tr id="pt3-desc-<% row_counter %>" class="collapse">
             <td colspan="0"><%=outcome.outcome_description%></td>
         </tr>
+        <% row_counter += 1 %>
         <% } %>
     </tbody>
 </table>
 
 
 <!-- CLOs that have more than a year until they need to be updated -->
-<h3 class="mt-2">
-    <button type="button" class="collapse-button">Low Priority CLOs</button>
+<h3 class="mt-2 low_priority">
+    <button type="button" data-toggle="collapse" data-target="#clo-table-3">
+        Low Priority CLOs
+    </button>
 </h3>
-<table class="table table-striped table-dark collapse-content">
+<table id="clo-table-3" class="table table-striped table-dark collapse">
     <thead>
         <th>Outcome ID</th>
         <th>Course</th>
@@ -165,17 +191,19 @@
         <th>Update By</th>
     </thead>
     <tbody>
+        <% let row_counter = 0 %>
         <% for (let outcome of CLOs_3) { %>
-        <tr><button type="button" class="collapse-button">
+        <tr><button type="button" data-toggle="collapse" data-target="#ct3-desc-<% row_counter %>">
             <td><%=outcome.outcome_id%></td>
             <td><%=outcome.domain_name%></td>
             <td><%=outcome.last_updated%></td>
             <td><%=outcome.next_update%></td>
         </button></tr>
         <!-- Collapsible description spans entire row -->
-        <tr class="collapse-content">
+        <tr id="ct3-desc-<% row_counter %>" class="collapse">
             <td colspan="0"><%=outcome.outcome_description%></td>
         </tr>
+        <% row_counter += 1 %>
         <% } %>
     </tbody>
 </table>
