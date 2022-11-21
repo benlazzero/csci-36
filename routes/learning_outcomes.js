@@ -5,7 +5,7 @@
 import express from 'express';
 
 // CLO data
-import clos from '../clos.json';
+import clos from '../clos.json' assert { type: "json" }; // KEEP ASSERT
 import updates from '../lastUpdated.js';
 
 // PLO data
@@ -32,7 +32,7 @@ function createOutcome (out_id, out_desc, dom_id, dom_name, last_update) {
     
     return outcome;
 }
-
+/*
 // FORMATTING PLOS -------------------------------------------------------------
 
 // Create PLO arrays
@@ -177,5 +177,33 @@ router.get("/learning_outcomes", (req, res) => {
         CLOs_3: lowPriorityCLOs
     });
 });
+*/
+
+
+let test = {
+    outcome_id: "test_outcome_id",
+    outcome_description: "test_outcome_description",
+    domain_id: "test_domain_id",
+    domain_name: "test_domain_name",
+    last_updated: new Date(),
+    next_update: new Date()
+};
+
+let testArray = [test, test, test];
+
+// Render the page
+router.get("/learning_outcomes", (req, res) => {
+    res.render("learning_outcomes", { 
+        title: "Timeline",
+        PLOs_1: testArray,
+        PLOs_2: testArray,
+        PLOs_3: testArray,
+        CLOs_1: testArray,
+        CLOs_2: testArray,
+        CLOs_3: testArray
+    });
+});
+
+
 
 export default router;
