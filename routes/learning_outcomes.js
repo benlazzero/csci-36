@@ -110,24 +110,34 @@ const lowPriorityCLOs = [];
 // line-by-line between the two files; for example, line 212 currently displays 
 // data for CSCI 42 in both clos.json and lastUpdated.js.
 
-let numberOfCourses = clos.length;
+let updatesArray = [];
+for (var course in updates) {
+    updatesArray.push([course, new Date(updates[course])]);
+}
+
+let closArray = [];
+for (var course in clos) {
+    closArray.push([course, clos[course]]);
+}
+
+let numberOfCourses = closArray.length;
 let i = 0;
 
 while (i < numberOfCourses) {
     
     // Separate individual CLOs 
-    const cloArray = clos[1].split("\n");
+    const separatedCLOs = closArray[i][1].split("\n");
     
     // Set aside shared CLO variables for efficiency
     let idPrefix = "CLO-";
-    let course_id = clos[0];
-    let last_update = updates[i][1];
+    let course_id = closArray[i][0];
+    let last_update = updatesArray[i][1];
     
     // Create an object for each CLO associated with the current course
-    for (let clo of cloArray) {
+    for (let clo of separatedCLOs) {
         
         // Create an id for the CLO
-        let idSuffix = cloArray.indexOf(clo);
+        let idSuffix = separatedCLOs.indexOf(clo);
         let clo_id = idPrefix.concat(course_id.replace(" ", ""), "-", idSuffix);
         
         // For now, course id's are also used as the course name
@@ -179,33 +189,5 @@ router.get("/learning_outcomes", (req, res) => {
         CLOs_3: lowPriorityCLOs
     });
 });
-
-/* This section is just for testing the imports and rendering
-
-let test = {
-    outcome_id: "test_outcome_id",
-    outcome_description: "test_outcome_description",
-    domain_id: "test_domain_id",
-    domain_name: "test_domain_name",
-    last_updated: new Date(),
-    next_update: new Date()
-};
-
-let testArray = [test, test, test];
-
-// Render the page
-router.get("/learning_outcomes", (req, res) => {
-    res.render("learning_outcomes", { 
-        title: "Timeline",
-        PLOs_1: testArray,
-        PLOs_2: testArray,
-        PLOs_3: testArray,
-        CLOs_1: testArray,
-        CLOs_2: testArray,
-        CLOs_3: testArray
-    });
-});
-
-*/
 
 export default router;

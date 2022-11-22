@@ -1,5 +1,5 @@
-// Note from Kendal: I made a new route (learning_outcomes.js) that uses this
-// code and adds to it. This page can safely be removed from the project, but
+// Note from Kendal: I made a new route (learning_outcomes.js) that adds to
+// this code. This page can safely be removed from the project, but
 // I've left it for now because of the pending code review.
 
 import express from 'express';
@@ -23,7 +23,7 @@ sortedDates.sort(function(a, b) {
 
 
 // you can uncomment to see the courses in order from oldest to newest
-console.log(sortedDates)
+//console.log(sortedDates)
 
 
 export default router;
