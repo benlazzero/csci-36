@@ -32,7 +32,7 @@ function createOutcome (out_id, out_desc, dom_id, dom_name, last_update) {
     
     return outcome;
 }
-/*
+
 // FORMATTING PLOS -------------------------------------------------------------
 
 // Create PLO arrays
@@ -41,7 +41,8 @@ const medPriorityPLOs = [];
 const lowPriorityPLOs = [];
 
 // Create an object for each PLO and add it to an array
-for (let po of poutcomes) {
+const allProgOutcomes =  await poutcomes.findAll({order: ['pout_id'], raw: true});
+for (let po of allProgOutcomes) {
     
     // Add PLO signifier to the PLO id
     let idPrefix = "PLO-";
@@ -50,7 +51,8 @@ for (let po of poutcomes) {
     // Find the name of the program associated with the PLO
     let program_name = "";
     
-    for (let prog of programs) {
+    const allPrograms =  await programs.findAll({order: ['prog_name'], raw: true});
+    for (let prog of allPrograms) {
       if (po.prog_id == prog.prog_id) {
           program_name = prog.prog_name;
           break;
@@ -177,8 +179,8 @@ router.get("/learning_outcomes", (req, res) => {
         CLOs_3: lowPriorityCLOs
     });
 });
-*/
 
+/* This section is just for testing the imports and rendering
 
 let test = {
     outcome_id: "test_outcome_id",
@@ -204,6 +206,6 @@ router.get("/learning_outcomes", (req, res) => {
     });
 });
 
-
+*/
 
 export default router;
