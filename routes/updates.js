@@ -1,3 +1,7 @@
+// Note from Kendal: I made a new route (learning_outcomes.js) that adds to
+// this code. This page can safely be removed from the project, but
+// I've left it for now because of the pending code review.
+
 import express from 'express';
 
 import updates from '../lastUpdated.js';
